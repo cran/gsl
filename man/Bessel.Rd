@@ -120,17 +120,12 @@ bessel_zero_J1(s, give=FALSE, strict=TRUE)
 bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{x}{input: real valued}
-  \item{v}{input: real valued}
-  \item{n}{input: integer valued}
-  \item{nmin}{input: integer valued}
-  \item{nmax}{input: integer valued}
-  \item{lmax}{input: integer valued}
-  \item{l}{input: integer valued}
-  \item{s}{input: integer valued}
-  \item{nu}{input: real valued}
-  \item{mode}{calc mode}
-  \item{give}{give error}
+  \item{x,v,nu}{input: real valued}
+  \item{n,nmin,nmax,lmax}{input: integer valued}
+  \item{l,s}{input: integer valued}
+  \item{mode}{Integer, calc mode}
+  \item{give}{Boolean with \code{TRUE} meaning to return a list of three
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{strict or not}
 }
 \details{All as for the GSL reference manual section 7.5

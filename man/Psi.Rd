@@ -20,14 +20,12 @@ psi_1(x, give=FALSE, strict=TRUE)
 psi_n(m, x, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{n}{input: integer values}
-  \item{m}{input: integer values}
-  \item{x}{input: real values}
-  \item{y}{input: real values}
+  \item{m,n}{input: integer values}
+  \item{x,y}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

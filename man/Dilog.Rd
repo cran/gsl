@@ -13,20 +13,20 @@ complex_dilog(r,theta, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{x}{input: real values}
-  \item{r}{input: real values}
+  \item{r}{input; see documentation for \code{theta} for details}
   \item{theta}{ in \code{complex_dilog}, input taking real
     values.  If this
     argument has its default value of \code{NULL}, interpret 
     \code{r} as a complex-valued object.  If
     non-null, interpret \code{r} as the Modulus, and \code{theta} as the
     argument, of the complex object passed to
-    \code{gsl_sf_complex_dilog_e()}.}
+    \code{gsl_sf_complex_dilog_e()}}
   \item{give}{Boolean, with default \code{FALSE} meaning to
     return just the answers, and \code{TRUE} meaning to return a status
-    vector as well.}
+    vector as well}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if nonzero status is returned by the GSL function (\code{FALSE}
-    means to return the value: use with caution).}
+    means to return the value: use with caution)}
 }
 
 \details{All functions as documented in the GSL reference manual section

@@ -33,13 +33,12 @@ ds(z,m)
 dc(z,m)
 }
 \arguments{
-  \item{u}{input: real values}
-  \item{m}{input: real values}
-  \item{z}{input:complex values}
+  \item{u,m}{input: real values}
+  \item{z}{input: complex values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \details{
   A straightforward wrapper for the \code{gsl_sf_elljac_e}

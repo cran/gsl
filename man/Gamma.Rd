@@ -54,21 +54,20 @@ lnbeta(a,b,give=FALSE,strict=TRUE)
 beta_inc(a,b,x,give=FALSE,strict=TRUE)
 }
 \arguments{
-  \item{x}{input: real values}
-  \item{n}{input: integer value}
-  \item{a}{input: real values}
-  \item{b}{input: real values}
-  \item{m}{input: integer value}
-  \item{give}{Boolean, with \code{TRUE} meaning to return error info}
-  \item{strict}{Boolean}
+  \item{x,a,b}{input: real values}
+  \item{m,n}{input: integer value}
   \item{zr}{In \code{gamma_complex()}, the real part of the argument}
   \item{zi}{In \code{gamma_complex()}, the imaginary part of the
     argument.  If missing (ie takes the default value of \code{NULL}),
-    interpret \code{zr} as complex, even if real.}
+    interpret \code{zr} as complex, even if real}
   \item{r.and.i}{In \code{gamma_complex()}, Boolean variable with
     default value of \code{TRUE} meaning to return a complex variable as
     per the details section below; and \code{FALSE} meaning to return
-    the values as advertised in the GSL manual.}
+    the values as advertised in the GSL manual}
+    \item{give}{Boolean with \code{TRUE} meaning to return a list of three
+    items: the value, an estimate of the error, and a status number}
+  \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
+    if status is an error}
 }
 \details{All functions as documented in the GSL reference manual section
   7.19.}
@@ -98,12 +97,6 @@ gamma_inc(1.2,1.3)
 beta(1.2, 1.3)
 lnbeta(1.2,1.55)
 beta_inc(1.2,1.4,1.6)
-
-
-
-
-
-
 
 }
 \keyword{array}

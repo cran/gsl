@@ -26,21 +26,12 @@ coulomb_CL(L,eta, give=FALSE,strict=TRUE)
 coulomb_CL_array(L_min, kmax, eta, give=FALSE,strict=TRUE)
 }
 \arguments{
-  \item{n}{input: integer}
-  \item{l}{input: integer}
-  \item{Z}{input: real values}
-  \item{r}{input: real values}
-  \item{eta}{input: real values}
-  \item{x}{input: real values}
-  \item{L_F}{input: real values}
-  \item{L_min}{input: real values}
-  \item{k}{input: real values}
-  \item{L}{input: real values}
-  \item{kmax}{integer}
+  \item{n,l,kmax}{input: integers}
+  \item{Z,r,eta,x,L_F,L_min,k,L}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number.}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

@@ -52,18 +52,14 @@ legendre_H3d(l, lambda, eta, give=FALSE, strict=TRUE)
 legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{x}{input: real values}
-  \item{l}{input: integer values}
-  \item{m}{input: integer values}
-  \item{lmax}{input: integer values}
-  \item{lambda}{input: real values}
-  \item{eta}{input: real values}
+  \item{eta,lambda,x}{input: real values}
+  \item{l,m,lmax}{input: integer values}
   \item{give}{Boolean, with default \code{FALSE} meaning to
     return just the answers, and \code{TRUE} meaning to return a status
-    vector as well.}
+    vector as well}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if nonzero status is returned by the GSL function (\code{FALSE}
-    means to return the value: use with caution)}.
+    means to return the value: use with caution)}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

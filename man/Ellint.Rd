@@ -28,16 +28,12 @@ ellint_RF(x, y, z, mode=0, give=FALSE,strict=TRUE)
 ellint_RJ(x, y, z, p, mode=0, give=FALSE,strict=TRUE)
 }
 \arguments{
-  \item{k}{input: real values}
-  \item{give}{Boolean: give error}
+  \item{phi,k,n,p,x,y,z}{input: real values}
+  \item{give}{Boolean, with default \code{FALSE} meaning to
+    return just the answers, and \code{TRUE} meaning to return a status
+    vector as well}
   \item{strict}{Boolean}
-  \item{phi}{input: real values}
-  \item{n}{input: real values}
-  \item{x}{input: real values}
-  \item{y}{input: real values}
-  \item{z}{input: real values}
-  \item{p}{input: real values}
-  \item{mode}{input: mode.  For \code{GSL_PREC_DOUBLE} ,
+  \item{mode}{input: mode.  For \code{GSL_PREC_DOUBLE},
     \code{GSL_PREC_SINGLE}, \code{GSL_PREC_APPROX} use \code{0,1,2}
     respectively.}
 }

@@ -17,14 +17,12 @@ laguerre_3(a, x, give=FALSE, strict=TRUE)
 laguerre_n(n, a, x, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{a}{input: real values}
-  \item{x}{input: real values}
+  \item{a,x}{input: real values}
   \item{n}{input: integer values}
-    \item{give}{Boolean, with \code{TRUE} meaning to return error info}
-    \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-      if nonzero status is returned by the GSL function (\code{FALSE}
-      means to return the value: use with caution)}.
-}
+  \item{give}{Boolean with \code{TRUE} meaning to return a list of three
+    items: the value, an estimate of the error, and a status number}
+  \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
+    if status is an error}}
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{

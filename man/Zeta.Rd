@@ -23,8 +23,7 @@ eta(s, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{n}{input: integer values}
-  \item{s}{input: real values}
-  \item{q}{input: real values}
+  \item{s,q}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number.}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}

@@ -27,13 +27,11 @@ fermi_dirac_3half(x, give=FALSE, strict=TRUE)
 fermi_dirac_inc_0(x, b, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{x}{input: real values}
-  \item{j}{input: real values (\code{fermi_dirac_int()})}
-  \item{b}{input: real values (\code{fermi_dirac_inc_0()})}
+  \item{x,j,b}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

@@ -13,7 +13,7 @@
 \title{Hypergeometric functions}
 \description{
 Hypergeometric functons as per the Gnu Scientific Library ref manual
-section 7.21 and Abramowitz and Stegun sections 13 and 17
+section 7.21 and Abramowitz and Stegun section 15
 }
 \usage{
 hyperg_0F1(c, x, give=FALSE, strict=TRUE)
@@ -29,20 +29,20 @@ hyperg_2F0(a, b, x, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{x}{input: real values}
-  \item{c}{input: real values}
-  \item{m}{input: integer values}
-  \item{n}{input: integer values}
-  \item{a}{input: real values}
-  \item{b}{input: real values}
-  \item{aR}{input: real values}
-  \item{aI}{input: real values}
+  \item{a,b,c}{input: real values}
+  \item{m,n}{input: integer values}
+  \item{aR,aI}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number.}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
+\note{
+  \dQuote{The circle of convergence of the Gauss hypergeometric series
+    is the unit circle \eqn{|z|=1}{|z|=1}} (AMS, page 556).
+  }
 \examples{
 
 hyperg_0F1(0.1,0.55)

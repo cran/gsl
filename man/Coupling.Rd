@@ -14,22 +14,12 @@ coupling_6j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, give=FALSE, strict=T
 coupling_9j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh, two_ji, give=FALSE, strict=TRUE)
 }
 \arguments{
-  \item{two_ja}{see gsl ref man}
-  \item{two_jb}{see gsl ref man}
-  \item{two_jc}{see gsl ref man}
-  \item{two_jd}{see gsl ref man}
-  \item{two_je}{see gsl ref man}
-  \item{two_jf}{see gsl ref man}
-  \item{two_jg}{see gsl ref man} 
-  \item{two_jh}{see gsl ref man}
-  \item{two_ji}{see gsl ref man}
-  \item{two_ma}{see gsl ref man}
-  \item{two_mb}{see gsl ref man}
-  \item{two_mc}{see gsl ref man}
+  \item{two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh,
+    two_ji, two_ma, two_mb, two_mc}{Arguments as per the  gsl manual}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
