@@ -283,8 +283,6 @@
   attributes(status) <- attr
   
   if(r.and.i){
-#    val <- exp(val_lnr)*cos(val_arg) + 1i*exp(val_lnr)*sin(val_arg)
-#    err <- exp(xerr_lnr)*cos(err_arg) + 1i*exp(err_lnr)*sin(err_arg)
     val <- val_lnr + 1i*val_arg
     err <- err_lnr + 1i*err_arg
     attributes(val) <- attr

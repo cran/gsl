@@ -72,6 +72,7 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
 }
 \details{All functions as documented in the GSL reference manual section
   7.19.}
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 gsl_sf_gamma(3)

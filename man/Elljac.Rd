@@ -47,7 +47,8 @@ dc(z,m)
   \code{dn()}, which implement 16.21.1 to 16.21.4  (thus taking complex
   arguments); and \code{ns()} et
   seq which are the minor elliptic functions.
-}  
+}
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 

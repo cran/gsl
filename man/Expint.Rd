@@ -29,7 +29,7 @@ atanint(x,give=FALSE,strict=TRUE)
   \item{give}{Boolean, with \code{TRUE} meaning to return error info}
   \item{strict}{Boolean}
 }
-
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 x <- seq(from=0.5, to=1, by=0.01)

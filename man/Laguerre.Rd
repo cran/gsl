@@ -25,11 +25,18 @@ laguerre_n(n, a, x, give=FALSE, strict=TRUE)
       if nonzero status is returned by the GSL function (\code{FALSE}
       means to return the value: use with caution)}.
 }
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
-\example{
-  laguerre_1(0.1,0.3)
-  laguerre_2(0.1,0.3)
-  laguerre_3(0.1,0.3)
-  laguerre_n(4,0.1,0.3)
+\examples{
+
+x <- seq(from=0,to=6,len=100)
+plot(x,laguerre_n(2,0,x),xlim=c(0,6),ylim=c(-2,3),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 22.9, p780")
+
+lines(x,laguerre_n(3,0,x))
+lines(x,laguerre_n(4,0,x))
+lines(x,laguerre_n(5,0,x))
+axis(1,pos=0)
+axis(2,pos=0)
+
   }
 \keyword{array}

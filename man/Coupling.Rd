@@ -31,6 +31,7 @@ coupling_9j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh, two_
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error.}
 }
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 coupling_3j(1,2,3,4,5,6)

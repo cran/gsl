@@ -18,5 +18,6 @@ lambert_Wm1(x, give=FALSE,strict=TRUE)
       if nonzero status is returned by the GSL function (\code{FALSE}
       means to return the value: use with caution)}.
 }
+\references{\url{http://www.gnu.org/software/gsl}}  
 \author{Robin K. S. Hankin}
 \keyword{array}

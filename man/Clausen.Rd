@@ -16,6 +16,7 @@ clausen(x, give=FALSE, strict=TRUE)
     if status is an error.}
 }
 \author{Robin K. S. Hankin}
+\references{\url{http://www.gnu.org/software/gsl}}
 \examples{
 
 x <- (0:30)*pi/180

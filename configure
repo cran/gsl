@@ -2794,8 +2794,8 @@ echo "$as_me: error: Cannot find GSL headers." >&2;}
 fi
 
 
-echo "$as_me:$LINENO: checking if GSL version >= 1.5" >&5
-echo $ECHO_N "checking if GSL version >= 1.5... $ECHO_C" >&6
+echo "$as_me:$LINENO: checking if GSL version >= 1.6" >&5
+echo $ECHO_N "checking if GSL version >= 1.6... $ECHO_C" >&6
 if test "$cross_compiling" = yes; then
   gsl_version_ok=yes
 else
@@ -2811,7 +2811,7 @@ cat >>conftest.$ac_ext <<_ACEOF
 #include <gsl/gsl_version.h>
 int main() {
 #ifdef GSL_VERSION
-  exit(strcmp(GSL_VERSION, "1.5") < 0);
+  exit(strcmp(GSL_VERSION, "1.6") < 0);
 #else
   exit(1);
 #endif
@@ -2841,8 +2841,8 @@ fi
 rm -f core core.* *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
 fi
 if test "${gsl_version_ok}" = no; then
-  { { echo "$as_me:$LINENO: error: Need GSL version >= 1.5" >&5
-echo "$as_me: error: Need GSL version >= 1.5" >&2;}
+  { { echo "$as_me:$LINENO: error: Need GSL version >= 1.6" >&5
+echo "$as_me: error: Need GSL version >= 1.6" >&2;}
    { (exit 1); exit 1; }; }
 else
   echo "$as_me:$LINENO: result: yes" >&5

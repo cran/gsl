@@ -56,6 +56,7 @@ airy_zero_Bi_deriv(n, give=FALSE, strict=TRUE)
   The zero functions return a status of \code{GSL_EDOM} and a value of
   \code{NA} for \eqn{n\leq 0}{n\leq 0}
   }
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 

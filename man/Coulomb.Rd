@@ -42,6 +42,7 @@ coulomb_CL_array(L_min, kmax, eta, give=FALSE,strict=TRUE)
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error.}
 }
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
 
@@ -54,7 +55,6 @@ lines(c(0,1),c(0,0))
 axis(2,pos=0)
 text(9.5, 0.63, expression(F[L]))
 text(8.5, 1.21, expression(G[L]))
-
 
 
 

@@ -136,20 +136,17 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 \details{All as for the GSL reference manual section 7.5
 }
 \author{Robin K. S. Hankin}
+\references{\url{http://www.gnu.org/software/gsl}}
 \examples{
 
 
 
 x <- seq(from=0,to=15,len=1000)
-
 plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
-
 jj.Y0 <- bessel_Y0(x)
 jj.Y0[jj.Y0< -0.8] <- NA
 lines(x,jj.Y0)
-
 lines(x,bessel_J1(x),lty=2)
-
 jj.Y1 <- bessel_Y1(x)
 jj.Y1[jj.Y1< -0.8] <- NA
 lines(x,jj.Y1,lty=2)
@@ -167,6 +164,7 @@ text(4.2, 0.43, expression(Y[1]))
 text(7.2, 0.33, expression(J[0]))
 text(8.6, 0.3, expression(J[0],paste("    ,")))
 text(9.1, 0.3, expression(Y[0]))
+
 
 
 

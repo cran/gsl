@@ -65,22 +65,24 @@ legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
     if nonzero status is returned by the GSL function (\code{FALSE}
     means to return the value: use with caution)}.
 }
+\references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
  theta <- seq(from=0,to=pi/2,len=100)
- plot(theta,legendre_P1(cos(theta)),type="l",ylim=c(-0.5,1),main="Figure 8.1 of Abramowitz and Stegun")
+ plot(theta,legendre_P1(cos(theta)),type="l",ylim=c(-0.5,1), main="Figure 8.1, p338")
  abline(1,0)
  lines(theta,legendre_P2(cos(theta)),type="l")
  lines(theta,legendre_P3(cos(theta)),type="l")
 
 x <- seq(from=0,to=1,len=600)
-plot(x, legendre_Plm(3,1,x), type="l",lty=3,main="Figure 8.2 of A and S: note sign error")
+plot(x, legendre_Plm(3,1,x), type="l",lty=3,main="Figure 8.2, p338: note sign error")
 lines(x,legendre_Plm(2,1,x), type="l",lty=2)
 lines(x,legendre_Plm(1,1,x), type="l",lty=1)
 abline(0,0)
 
 
-plot(x,legendre_Ql(0,x),xlim=c(0,1), ylim=c(-1,1.5), type="l",lty=1, main="Figure 8.4 of A and S")
+plot(x,legendre_Ql(0,x),xlim=c(0,1), ylim=c(-1,1.5), type="l",lty=1,
+main="Figure 8.4, p339")
 lines(x,legendre_Ql(1,x),lty=2)
 lines(x,legendre_Ql(2,x),lty=3)
 lines(x,legendre_Ql(3,x),lty=4)
