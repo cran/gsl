@@ -7,7 +7,8 @@
 \alias{laguerre_n}
 \title{Laguerre functions}
 \description{
-Laguerre functons as per the Gnu Scientific Library
+  Laguerre functons as per the Gnu Scientific Library reference manual
+  section 7.22
 }
 \usage{
 laguerre_1(a, x, give=FALSE, strict=TRUE)

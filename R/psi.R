@@ -29,7 +29,7 @@
 
 "psi" <- function(x, give=FALSE, strict=TRUE){
   x.vec <- as.vector(x)
-  jj <- .C("psi_int",
+  jj <- .C("psi",
            as.double(x.vec),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
@@ -59,7 +59,7 @@
 
 "psi_1piy" <- function(y, give=FALSE, strict=TRUE){
   y.vec <- as.vector(y)
-  jj <- .C("psi_int",
+  jj <- .C("psi_1piy",
            as.double(y.vec),
            as.integer(length(y.vec)),
            val=as.double(y.vec),

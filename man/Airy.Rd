@@ -25,8 +25,8 @@
 \alias{airy_zero_Bi_deriv_e}
 \title{Airy functions}
 \description{
-Airy functons as per the Gnu Scientific Library
-}
+Airy functons as per the Gnu Scientific Library, reference manual
+section 7.4}
 \usage{
 airy_Ai(x, mode=0, give=FALSE, strict=TRUE)
 airy_Ai(x, mode=0, give=FALSE, strict=TRUE)

@@ -24,7 +24,7 @@
 \alias{beta_inc}
 \title{gamma functions}
 \description{
-Gamma functions as per the Gnu Scientific Library and A&S
+Gamma functions as per the Gnu Scientific Library 
 }
 \usage{
 gsl_sf_gamma(x,give=FALSE,strict=TRUE)
@@ -67,7 +67,8 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
     per the details section below; and \code{FALSE} meaning to return
     the values as advertised in the GSL manual.}
 }
-\details{All functions as documented in the GSL reference library.}
+\details{All functions as documented in the GSL reference manual section
+  7.19.}
 \author{Robin K. S. Hankin}
 \examples{
 gsl_sf_gamma(3)

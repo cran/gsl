@@ -31,6 +31,21 @@ void psi(double *x, int *nx, double *val, double *err, int *status)
   }
 }  
 
+void psi_1piy(double *y, int *ny, double *val, double *err, int *status)
+{
+  int i;
+  gsl_sf_result result;
+  gsl_set_error_handler_off();
+  
+  for(i = 0; i< *ny ; i++){
+    status[i]  = gsl_sf_psi_1piy_e(y[i] , &result) ;
+    val[i] = result.val;
+    err[i] = result.err;
+  }
+}  
+
+
+
 
 void psi_1_int(int *n, int *nn, double *val, double *err, int *status)
 {

@@ -1,10 +1,12 @@
 Package: gsl
+Version: 1.2-20
+Date: 18-11-2004
 Title: wrapper for the Gnu Scientific Library
-Version: 1.2-19
 Author: Robin K. S. Hankin
+SystemRequirements: Gnu Scientific Library version 1.5
 Description: 
  An R wrapper for special functions of the Gnu Scientific Library.
- (http://www.gnu.org/software/gsl/) Error forms of GSL functions (_e
+ (http://www.gnu.org/software/gsl/).  Error forms of GSL functions (_e
  versions) are used if available.  The function naming scheme directly
  copies the GSL manual except that leading gsl_sf_ and, if present,
  the trailing _e is stripped: thus gsl_sf_Airy_Ai_e goes to R function
@@ -19,7 +21,7 @@ Description:
  R-exts.  Documentation is limited to: (a), a pointer to the GSL
  reference book, which would in any case dominate any docs here; and
  (b), re-productions of some tables and figures in Abramowitz and
- Stegun.
+ Stegun (June 1964).
 Maintainer: Robin Hankin <r.hankin@soc.soton.ac.uk>
 License: GPL
-Packaged: Wed Nov 17 16:08:10 2004; rksh
+Packaged: Thu Nov 18 09:06:35 2004; rksh

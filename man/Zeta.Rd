@@ -1,0 +1,46 @@
+\name{Zeta}
+\alias{Zeta}
+\alias{zeta_int}
+\alias{zeta}
+\alias{zetam1_int}
+\alias{zetam1}
+\alias{hzeta}
+\alias{eta_int}
+\alias{eta}
+\title{Zeta functions}
+\description{
+Zeta functons as per the Gnu Scientific Library
+}
+\usage{
+zeta_int(n, give=FALSE, strict=TRUE)
+zeta(s, give=FALSE, strict=TRUE)
+zetam1_int(n, give=FALSE, strict=TRUE)
+zetam1(s, give=FALSE, strict=TRUE)
+hzeta(s, q, give=FALSE, strict=TRUE)
+eta_int(n, give=FALSE, strict=TRUE)
+eta(s, give=FALSE, strict=TRUE)
+
+}
+\arguments{
+  \item{n}{input: integer values}
+  \item{s}{input: real values}
+  \item{q}{input: real values}
+  \item{give}{Boolean with \code{TRUE} meaning to return a list of three
+    items: the value, an estimate of the error, and a status number.}
+  \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
+    if status is an error.}
+}
+\author{Robin K. S. Hankin}
+\examples{
+
+zeta_int(1:5)
+zeta(c(pi,pi*2))
+zetam1_int(1:5)
+zetam1(c(pi,pi*2))
+hzeta(1.1,1.2)
+eta_int(1:5)
+eta(c(pi,pi*2))
+
+}
+
+\keyword{array}

@@ -58,7 +58,8 @@
 \alias{bessel_zero_Jnu}
 \title{Bessel functions}
 \description{
-Bessel functons as per the Gnu Scientific Library
+Bessel functons as per the Gnu Scientific Library, reference manual
+section 7.5}
 }
 \usage{
 bessel_J0(x, give=FALSE, strict=TRUE)

@@ -1,13 +1,17 @@
-\name{Dawson}
-\alias{Dawson}
-\alias{dawson}
-\title{Dawson functions}
+\name{Synchrotron}
+\alias{Synchrotron}
+\alias{synchrotron}
+\alias{synchrotron_1}
+\alias{synchrotron_2}
+\title{Synchrotron functions}
 \description{
-Dawson functons as per the Gnu Scientific Library, reference manual
-section 7.9
+Synchrotron functons as per the Gnu Scientific Library, reference
+section 7.28
+
 }
 \usage{
-dawson(x, give=FALSE, strict=TRUE)
+synchrotron_1(x, give=FALSE, strict=TRUE)
+synchrotron_2(x, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{x}{input: real values}
@@ -20,7 +24,8 @@ dawson(x, give=FALSE, strict=TRUE)
 \examples{
 
 x <- seq(from=0,to=2,by=0.01)
-dawson(x)   #table 7.5 of Ab and St
+synchrotron_1(x)
+synchrotron_2(x)   
 }
 
 \keyword{array}
