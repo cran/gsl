@@ -1,7 +1,10 @@
 \name{Lambert}
 \alias{Lambert}
+\alias{lambert}
 \alias{lambert_W0}
 \alias{lambert_Wm1}
+\alias{Lambert_W0}
+\alias{Lambert_Wm1}
 \title{Lambert's W  function}
 \description{
   Lambert's W function as per the Gnu Scientific Library reference manual
@@ -16,7 +19,7 @@ lambert_Wm1(x, give=FALSE,strict=TRUE)
     \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error}}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}  
 \author{Robin K. S. Hankin}

@@ -78,6 +78,6 @@ function(r, length)
 "rng_uniform_int" <- function(r, N, length)
 {
     if( ! (N > 0) )
-      error("N needs to be positive")
+      stop("N needs to be positive")
     .Call("rng_uniform_int", r, N, length, PACKAGE = "gsl")
 }
