@@ -24,7 +24,8 @@
 \alias{beta_inc}
 \title{gamma functions}
 \description{
-Gamma functions as per the Gnu Scientific Library 
+ Gamma functions as per the Gnu Scientific Library reference manual
+ section 7.19
 }
 \usage{
 gsl_sf_gamma(x,give=FALSE,strict=TRUE)

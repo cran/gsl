@@ -133,10 +133,7 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
   \item{give}{give error}
   \item{strict}{strict or not}
 }
-\details{All as for the GSL library, except for
-  \code{process.bessel.args()}, which ensures that the arguments
-  \code{n} and \code{x} are suitable for passing to the relevant
-  \code{C} routine.
+\details{All as for the GSL reference manual section 7.5
 }
 \author{Robin K. S. Hankin}
 \examples{

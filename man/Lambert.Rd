@@ -4,7 +4,8 @@
 \alias{lambert_Wm1}
 \title{Lambert's W  function}
 \description{
-Lambert's W function as per the Gnu Scientific Library
+  Lambert's W function as per the Gnu Scientific Library reference manual
+  section 7.23
 }
 \usage{
 lambert_W0(x, give=FALSE, strict=TRUE)

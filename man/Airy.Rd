@@ -29,8 +29,8 @@ Airy functons as per the Gnu Scientific Library, reference manual
 section 7.4}
 \usage{
 airy_Ai(x, mode=0, give=FALSE, strict=TRUE)
-airy_Ai(x, mode=0, give=FALSE, strict=TRUE)
 airy_Ai_scaled(x, mode=0, give=FALSE, strict=TRUE)
+airy_Ai(x, mode=0, give=FALSE, strict=TRUE)
 airy_Bi_scaled(x, mode=0, give=FALSE, strict=TRUE)
 airy_Ai_deriv(x, mode=0, give=FALSE, strict=TRUE)
 airy_Bi_deriv(x, mode=0, give=FALSE, strict=TRUE)

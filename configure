@@ -2121,7 +2121,6 @@ ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $
 ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
-
 echo "$as_me:$LINENO: checking for gsl_sf_airy_Ai_e in -lgsl" >&5
 echo $ECHO_N "checking for gsl_sf_airy_Ai_e in -lgsl... $ECHO_C" >&6
 if test "${ac_cv_lib_gsl_gsl_sf_airy_Ai_e+set}" = set; then
@@ -2177,12 +2176,7 @@ fi
 echo "$as_me:$LINENO: result: $ac_cv_lib_gsl_gsl_sf_airy_Ai_e" >&5
 echo "${ECHO_T}$ac_cv_lib_gsl_gsl_sf_airy_Ai_e" >&6
 if test $ac_cv_lib_gsl_gsl_sf_airy_Ai_e = yes; then
-  cat >>confdefs.h <<_ACEOF
-#define HAVE_LIBGSL 1
-_ACEOF
-
-  LIBS="-lgsl $LIBS"
-
+  LIBS="${LIBS} -lgsl -lgslcblas"
 else
   { { echo "$as_me:$LINENO: error: Cannot find Gnu Scientific Library." >&5
 echo "$as_me: error: Cannot find Gnu Scientific Library." >&2;}
@@ -2662,18 +2656,18 @@ fi
 done
 
 
-if test "${ac_cv_header_gsl_gsl_sf_airy_h+set}" = set; then
-  echo "$as_me:$LINENO: checking for gsl/gsl_sf_airy.h" >&5
-echo $ECHO_N "checking for gsl/gsl_sf_airy.h... $ECHO_C" >&6
-if test "${ac_cv_header_gsl_gsl_sf_airy_h+set}" = set; then
+if test "${ac_cv_header_gsl_gsl_version_h+set}" = set; then
+  echo "$as_me:$LINENO: checking for gsl/gsl_version.h" >&5
+echo $ECHO_N "checking for gsl/gsl_version.h... $ECHO_C" >&6
+if test "${ac_cv_header_gsl_gsl_version_h+set}" = set; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 fi
-echo "$as_me:$LINENO: result: $ac_cv_header_gsl_gsl_sf_airy_h" >&5
-echo "${ECHO_T}$ac_cv_header_gsl_gsl_sf_airy_h" >&6
+echo "$as_me:$LINENO: result: $ac_cv_header_gsl_gsl_version_h" >&5
+echo "${ECHO_T}$ac_cv_header_gsl_gsl_version_h" >&6
 else
   # Is the header compilable?
-echo "$as_me:$LINENO: checking gsl/gsl_sf_airy.h usability" >&5
-echo $ECHO_N "checking gsl/gsl_sf_airy.h usability... $ECHO_C" >&6
+echo "$as_me:$LINENO: checking gsl/gsl_version.h usability" >&5
+echo $ECHO_N "checking gsl/gsl_version.h usability... $ECHO_C" >&6
 cat >conftest.$ac_ext <<_ACEOF
 #line $LINENO "configure"
 /* confdefs.h.  */
@@ -2682,7 +2676,7 @@ cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
 $ac_includes_default
-#include <gsl/gsl_sf_airy.h>
+#include <gsl/gsl_version.h>
 _ACEOF
 rm -f conftest.$ac_objext
 if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -2708,8 +2702,8 @@ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
 echo "${ECHO_T}$ac_header_compiler" >&6
 
 # Is the header present?
-echo "$as_me:$LINENO: checking gsl/gsl_sf_airy.h presence" >&5
-echo $ECHO_N "checking gsl/gsl_sf_airy.h presence... $ECHO_C" >&6
+echo "$as_me:$LINENO: checking gsl/gsl_version.h presence" >&5
+echo $ECHO_N "checking gsl/gsl_version.h presence... $ECHO_C" >&6
 cat >conftest.$ac_ext <<_ACEOF
 #line $LINENO "configure"
 /* confdefs.h.  */
@@ -2717,7 +2711,7 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
-#include <gsl/gsl_sf_airy.h>
+#include <gsl/gsl_version.h>
 _ACEOF
 if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
   (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
@@ -2750,10 +2744,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
 # So?  What about this header?
 case $ac_header_compiler:$ac_header_preproc in
   yes:no )
-    { echo "$as_me:$LINENO: WARNING: gsl/gsl_sf_airy.h: accepted by the compiler, rejected by the preprocessor!" >&5
-echo "$as_me: WARNING: gsl/gsl_sf_airy.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
-    { echo "$as_me:$LINENO: WARNING: gsl/gsl_sf_airy.h: proceeding with the preprocessor's result" >&5
-echo "$as_me: WARNING: gsl/gsl_sf_airy.h: proceeding with the preprocessor's result" >&2;}
+    { echo "$as_me:$LINENO: WARNING: gsl/gsl_version.h: accepted by the compiler, rejected by the preprocessor!" >&5
+echo "$as_me: WARNING: gsl/gsl_version.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+    { echo "$as_me:$LINENO: WARNING: gsl/gsl_version.h: proceeding with the preprocessor's result" >&5
+echo "$as_me: WARNING: gsl/gsl_version.h: proceeding with the preprocessor's result" >&2;}
     (
       cat <<\_ASBOX
 ## ------------------------------------ ##
@@ -2764,12 +2758,12 @@ _ASBOX
       sed "s/^/$as_me: WARNING:     /" >&2
     ;;
   no:yes )
-    { echo "$as_me:$LINENO: WARNING: gsl/gsl_sf_airy.h: present but cannot be compiled" >&5
-echo "$as_me: WARNING: gsl/gsl_sf_airy.h: present but cannot be compiled" >&2;}
-    { echo "$as_me:$LINENO: WARNING: gsl/gsl_sf_airy.h: check for missing prerequisite headers?" >&5
-echo "$as_me: WARNING: gsl/gsl_sf_airy.h: check for missing prerequisite headers?" >&2;}
-    { echo "$as_me:$LINENO: WARNING: gsl/gsl_sf_airy.h: proceeding with the preprocessor's result" >&5
-echo "$as_me: WARNING: gsl/gsl_sf_airy.h: proceeding with the preprocessor's result" >&2;}
+    { echo "$as_me:$LINENO: WARNING: gsl/gsl_version.h: present but cannot be compiled" >&5
+echo "$as_me: WARNING: gsl/gsl_version.h: present but cannot be compiled" >&2;}
+    { echo "$as_me:$LINENO: WARNING: gsl/gsl_version.h: check for missing prerequisite headers?" >&5
+echo "$as_me: WARNING: gsl/gsl_version.h: check for missing prerequisite headers?" >&2;}
+    { echo "$as_me:$LINENO: WARNING: gsl/gsl_version.h: proceeding with the preprocessor's result" >&5
+echo "$as_me: WARNING: gsl/gsl_version.h: proceeding with the preprocessor's result" >&2;}
     (
       cat <<\_ASBOX
 ## ------------------------------------ ##
@@ -2780,25 +2774,80 @@ _ASBOX
       sed "s/^/$as_me: WARNING:     /" >&2
     ;;
 esac
-echo "$as_me:$LINENO: checking for gsl/gsl_sf_airy.h" >&5
-echo $ECHO_N "checking for gsl/gsl_sf_airy.h... $ECHO_C" >&6
-if test "${ac_cv_header_gsl_gsl_sf_airy_h+set}" = set; then
+echo "$as_me:$LINENO: checking for gsl/gsl_version.h" >&5
+echo $ECHO_N "checking for gsl/gsl_version.h... $ECHO_C" >&6
+if test "${ac_cv_header_gsl_gsl_version_h+set}" = set; then
   echo $ECHO_N "(cached) $ECHO_C" >&6
 else
-  ac_cv_header_gsl_gsl_sf_airy_h=$ac_header_preproc
+  ac_cv_header_gsl_gsl_version_h=$ac_header_preproc
 fi
-echo "$as_me:$LINENO: result: $ac_cv_header_gsl_gsl_sf_airy_h" >&5
-echo "${ECHO_T}$ac_cv_header_gsl_gsl_sf_airy_h" >&6
+echo "$as_me:$LINENO: result: $ac_cv_header_gsl_gsl_version_h" >&5
+echo "${ECHO_T}$ac_cv_header_gsl_gsl_version_h" >&6
 
 fi
-if test $ac_cv_header_gsl_gsl_sf_airy_h = yes; then
+if test $ac_cv_header_gsl_gsl_version_h = yes; then
   :
 else
-  { { echo "$as_me:$LINENO: error: Cannot find gsl headers." >&5
-echo "$as_me: error: Cannot find gsl headers." >&2;}
+  { { echo "$as_me:$LINENO: error: Cannot find GSL headers." >&5
+echo "$as_me: error: Cannot find GSL headers." >&2;}
    { (exit 1); exit 1; }; }
 fi
 
+
+echo "$as_me:$LINENO: checking if GSL version >= 1.5" >&5
+echo $ECHO_N "checking if GSL version >= 1.5... $ECHO_C" >&6
+if test "$cross_compiling" = yes; then
+  gsl_version_ok=yes
+else
+  cat >conftest.$ac_ext <<_ACEOF
+#line $LINENO "configure"
+/* confdefs.h.  */
+_ACEOF
+cat confdefs.h >>conftest.$ac_ext
+cat >>conftest.$ac_ext <<_ACEOF
+/* end confdefs.h.  */
+
+#include <string.h>
+#include <gsl/gsl_version.h>
+int main() {
+#ifdef GSL_VERSION
+  exit(strcmp(GSL_VERSION, "1.5") < 0);
+#else
+  exit(1);
+#endif
+}
+
+_ACEOF
+rm -f conftest$ac_exeext
+if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+  (eval $ac_link) 2>&5
+  ac_status=$?
+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+  (exit $ac_status); } && { ac_try='./conftest$ac_exeext'
+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+  (eval $ac_try) 2>&5
+  ac_status=$?
+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+  (exit $ac_status); }; }; then
+  gsl_version_ok=yes
+else
+  echo "$as_me: program exited with status $ac_status" >&5
+echo "$as_me: failed program was:" >&5
+sed 's/^/| /' conftest.$ac_ext >&5
+
+( exit $ac_status )
+gsl_version_ok=no
+fi
+rm -f core core.* *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
+fi
+if test "${gsl_version_ok}" = no; then
+  { { echo "$as_me:$LINENO: error: Need GSL version >= 1.5" >&5
+echo "$as_me: error: Need GSL version >= 1.5" >&2;}
+   { (exit 1); exit 1; }; }
+else
+  echo "$as_me:$LINENO: result: yes" >&5
+echo "${ECHO_T}yes" >&6
+fi
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -3368,6 +3417,5 @@ if test "$no_create" != yes; then
   # would make configure fail if this is the last instruction.
   $ac_cs_success || { (exit 1); exit 1; }
 fi
-
 
 

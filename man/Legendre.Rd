@@ -14,7 +14,8 @@
 \alias{legendre_sphPlm_array}
 \title{Legendre functions}
 \description{
-Legendre functons as per the Gnu Scientific Library
+Legendre functons as per the Gnu Scientific Library reference manual
+section 7.24
 }
 \usage{
 legendre_P1  (x,give=FALSE,strict=TRUE)

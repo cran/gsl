@@ -9,7 +9,7 @@
 \alias{eta}
 \title{Zeta functions}
 \description{
-Zeta functons as per the Gnu Scientific Library
+Zeta functons as per the Gnu Scientific Library 7.31
 }
 \usage{
 zeta_int(n, give=FALSE, strict=TRUE)

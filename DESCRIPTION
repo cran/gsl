@@ -1,5 +1,5 @@
 Package: gsl
-Version: 1.2-20
+Version: 1.2-21
 Date: 18-11-2004
 Title: wrapper for the Gnu Scientific Library
 Author: Robin K. S. Hankin
@@ -24,4 +24,4 @@ Description:
  Stegun (June 1964).
 Maintainer: Robin Hankin <r.hankin@soc.soton.ac.uk>
 License: GPL
-Packaged: Thu Nov 18 09:06:35 2004; rksh
+Packaged: Mon Nov 22 09:15:51 2004; rksh
