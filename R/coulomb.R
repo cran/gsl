@@ -188,6 +188,7 @@
   val <- jj$val
   dim(val) <- c(kmax+1, length(x.vec))
   rownames(val) <- L_min:(L_min+kmax)
+  colnames(val) <- names(x)
   status <- jj$status
   attributes(status) <- attr
 
@@ -196,7 +197,7 @@
   }
   
   if(give){
-    return(list(val=val, F_exp=F_exp, status=status))
+    return(list(val=val, F_exp=jj$F_exp, status=status))
   } else {
     return(val)
   }  
@@ -324,6 +325,7 @@
   val <- jj$val
   dim(val) <- c(kmax+1, length(x.vec))
   rownames(val) <- L_min:(L_min+kmax)
+  colnames(val) <- names(x)
   status <- jj$status
   attributes(status) <- attr
 
@@ -332,7 +334,7 @@
   }
   
   if(give){
-    return(list(val=val, F_exp=F_exp, status=status))
+    return(list(val=val, F_exp=jj$F_exp, status=status))
   } else {
     return(val)
   }  

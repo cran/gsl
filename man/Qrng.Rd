@@ -1,5 +1,6 @@
 \name{Qrng}
 \alias{Qrng}
+\alias{qrng}
 \alias{qrng_alloc}
 \alias{qrng_clone}
 \alias{qrng_init}
