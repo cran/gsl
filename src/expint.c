@@ -4,68 +4,53 @@
    of the name.  Thus gsl_sf_expint_W0 goes to expint_W0. */
 
 
-void expint_E1_e(double *x, int *nx, double *val, double *err, int *status)
+void expint_E1_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_expint_E1_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_expint_E1_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
 }  
 
-void expint_E2_e(double *x, int *nx, double *val, double *err, int *status)
+void expint_E2_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_expint_E2_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_expint_E2_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
 }
 
-void expint_Ei_e(double *x, int *nx, double *val, double *err, int *status)
+void expint_Ei_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_expint_Ei_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_expint_Ei_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
 }
 
-void Shi_e(double *x, int *nx, double *val, double *err, int *status)
+void Shi_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_Shi_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
-}
-
-
-
-void Chi_e(double *x, int *nx, double *val, double *err, int *status)
-{
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
-  
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_Chi_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_Shi_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
@@ -73,14 +58,29 @@ void Chi_e(double *x, int *nx, double *val, double *err, int *status)
 
 
 
-void expint_3_e(double *x, int *nx, double *val, double *err, int *status)
+void Chi_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_expint_3_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_Chi_e(x[i] , &result) ;
+    val[i] = result.val;
+    err[i] = result.err;
+  }
+}
+
+
+
+void expint_3_e(double *x, int *len, double *val, double *err, int *status)
+{
+  int i;
+  gsl_sf_result result;
+  gsl_set_error_handler_off();
+  
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_expint_3_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
@@ -91,41 +91,41 @@ void expint_3_e(double *x, int *nx, double *val, double *err, int *status)
 
 
 
-void Si_e(double *x, int *nx, double *val, double *err, int *status)
+void Si_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_Si_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_Si_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
 }
 
 
-void Ci_e(double *x, int *nx, double *val, double *err, int *status)
+void Ci_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_Ci_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_Ci_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }
 }
 
-void atanint_e(double *x, int *nx, double *val, double *err, int *status)
+void atanint_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
   gsl_set_error_handler_off();
 
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_atanint_e(x[i] , &result) ;
+  for(i = 0; i< *len ; i++){
+    status[i] = gsl_sf_atanint_e(x[i] , &result) ;
     val[i] = result.val;
     err[i] = result.err;
   }

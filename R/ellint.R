@@ -1,4 +1,5 @@
 "ellint_Kcomp" <- function(k, mode=0, give=FALSE, strict=TRUE){
+  attr <- attributes(k)
   if(length(mode)>1){stop("length of mode must be 1")}
   k.vec <- as.vector(k)
   jj <- .C("ellint_Kcomp_e",
@@ -7,15 +8,15 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attributes(k)
   err <- jj$err
-  attributes(err) <- attributes(k)  
   status <- jj$status
-  attributes(status) <- attributes(k)
+  attributes(val) <- attr
+  attributes(err) <- attr  
+  attributes(status) <- attr
 
   if(strict){
     val <- strictify(val,status)
@@ -29,6 +30,7 @@
 }
 
 "ellint_Ecomp" <- function(k, mode=0, give=FALSE, strict=TRUE){
+  attr <- attributes(k)
   if(length(mode)>1){stop("length of mode must be 1")}
   k.vec <- as.vector(k)
   jj <- .C("ellint_Ecomp_e",
@@ -37,15 +39,15 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attributes(k)
   err <- jj$err
-  attributes(err) <- attributes(k)  
   status <- jj$status
-  attributes(status) <- attributes(k)
+  attributes(val) <- attr
+  attributes(err) <- attr  
+  attributes(status) <- attr
 
   if(strict){
     val <- strictify(val,status)
@@ -61,7 +63,7 @@
 "ellint_F" <- function(phi, k, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.2.args(phi,k)
+  jj <- process.args(phi,k)
   phi.vec <- jj$arg1
   k.vec <- jj$arg2
   attr <- jj$attr
@@ -73,14 +75,14 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -99,7 +101,7 @@
 "ellint_E" <- function(phi, k, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.2.args(phi,k)
+  jj <- process.args(phi,k)
   phi.vec <- jj$arg1
   k.vec <- jj$arg2
   attr <- jj$attr
@@ -111,14 +113,14 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -135,7 +137,7 @@
 "ellint_P" <- function(phi, k, n, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.3.args(phi,k,n)
+  jj <- process.args(phi,k,n)
   phi.vec <- jj$arg1
   k.vec <- jj$arg2
   n.vec <- jj$arg3
@@ -149,14 +151,14 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -173,7 +175,7 @@
 "ellint_D" <- function(phi, k, n, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.3.args(phi,k,n)
+  jj <- process.args(phi,k,n)
   phi.vec <- jj$arg1
   k.vec <- jj$arg2
   n.vec <- jj$arg3
@@ -187,14 +189,14 @@
            as.integer(mode),
            val=as.double(k.vec),
            err=as.double(k.vec),
-           status=seq(along=k.vec),
+           status=as.integer(0*k.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -211,7 +213,7 @@
 "ellint_RC" <- function(x, y, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.2.args(x,y)
+  jj <- process.args(x,y)
   x.vec <- jj$arg1
   y.vec <- jj$arg2
   attr <- jj$attr
@@ -223,14 +225,14 @@
            as.integer(mode),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -247,7 +249,7 @@
 "ellint_RD" <- function(x, y, z, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.3.args(x,y,z)
+  jj <- process.args(x,y,z)
   x.vec <- jj$arg1
   y.vec <- jj$arg2
   z.vec <- jj$arg3
@@ -261,14 +263,14 @@
            as.integer(mode),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -284,7 +286,7 @@
 "ellint_RF" <- function(x, y, z, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.3.args(x,y,z)
+  jj <- process.args(x,y,z)
   x.vec <- jj$arg1
   y.vec <- jj$arg2
   z.vec <- jj$arg3
@@ -298,14 +300,14 @@
            as.integer(mode),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -324,7 +326,7 @@
   if(length(mode)>1){stop("length of mode must be 1")}
   if(length(p)>1){stop("length of p must be 1")}
 
-  jj <- process.3.args(x,y,z)
+  jj <- process.args(x,y,z)
   x.vec <- jj$arg1
   y.vec <- jj$arg2
   z.vec <- jj$arg3
@@ -339,14 +341,14 @@
            as.integer(mode),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
-  attributes(err) <- attr
   status <- jj$status
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){

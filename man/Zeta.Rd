@@ -33,6 +33,10 @@ eta(s, give=FALSE, strict=TRUE)
 \author{Robin K. S. Hankin}
 \examples{
 
+n <- 1:10
+cbind(n,zeta(n),eta(n))   #table 23.3, p 811
+
+
 zeta_int(1:5)
 zeta(c(pi,pi*2))
 zetam1_int(1:5)

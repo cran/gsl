@@ -52,6 +52,10 @@ airy_zero_Bi_deriv(n, give=FALSE, strict=TRUE)
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error.}
 }
+\details{
+  The zero functions return a status of \code{GSL_EDOM} and a value of
+  \code{NA} for \eqn{n\leq 0}{n\leq 0}
+  }
 \author{Robin K. S. Hankin}
 \examples{
 
@@ -72,6 +76,13 @@ lines(x,airy_Ai       (-x),type="l",lty=2)
 lines(x,airy_Ai_deriv ( x),type="l",lty=3)
 lines(x,airy_Ai_deriv (-x),type="l",lty=4)
 abline(0,0)
+
+
+airy_zero_Ai(-3:3)
+airy_zero_Bi(-3:3)
+airy_zero_Ai_deriv(-3:3)
+airy_zero_Bi_deriv(-3:3)
+
 
 x <- 1:10  #table 10.13, p478
 cbind(x,

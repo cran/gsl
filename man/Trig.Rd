@@ -2,6 +2,13 @@
 \alias{Trig}
 \alias{gsl_sf_sin}
 \alias{gsl_sf_cos}
+\alias{hypot}
+\alias{sinc}
+\alias{complex_sin}
+\alias{complex_cos}
+\alias{complex_logsin}
+\alias{lnsinh}
+\alias{lncosh}
 \title{Trig functions}
 \description{
 Trig functons as per the Gnu Scientific Library, section 7.30
@@ -9,9 +16,24 @@ Trig functons as per the Gnu Scientific Library, section 7.30
 \usage{
 gsl_sf_sin(x, give=FALSE, strict=TRUE)
 gsl_sf_cos(x, give=FALSE, strict=TRUE)
+hypot(x, y, give=FALSE, strict=TRUE)
+sinc(x, give=FALSE, strict=TRUE)
+complex_sin(zr, zi=NULL, r.and.i=TRUE, give=FALSE, strict=TRUE)
+complex_cos(zr, zi=NULL, r.and.i=TRUE, give=FALSE, strict=TRUE)
+lnsinh(x, give=FALSE, strict=TRUE)
+lncosh(x, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{x}{input: real values}
+  \item{y}{input: real values}
+    \item{zr}{In \code{gamma_complex()}, the real part of the argument}
+  \item{zi}{In \code{complex_sin()} et seq, the imaginary part of the
+    argument.  If missing (ie takes the default value of \code{NULL}),
+    interpret \code{zr} as complex, even if real.}
+  \item{r.and.i}{In \code{complex_sin()} et seq, Boolean variable with
+    default value of \code{TRUE} meaning to return a complex variable as
+    per the details section below; and \code{FALSE} meaning to return
+    the values as advertised in the GSL manual.}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number.}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}

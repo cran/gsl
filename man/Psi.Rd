@@ -31,6 +31,11 @@ psi_n(m, x, give=FALSE, strict=TRUE)
 }
 \author{Robin K. S. Hankin}
 \examples{
+
+x <- seq(from=1.2,to=1.25,by=0.005)
+cbind(x,psi(x),psi_1(x))
+#tabe 6.1, p267, bottom bit
+
 psi_int(1:6)
 psi(pi+(1:6))
 psi_1piy(pi+(1:6))

@@ -4,54 +4,54 @@
    of the name.  Thus gsl_sf_transport  goes to transport. */
 
 
-void transport_2(double *x, int *nx, double *val, double *err, int *status)
+void transport_2(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_transport_2_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_transport_2_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 } 
  
-void transport_3(double *x, int *nx, double *val, double *err, int *status)
+void transport_3(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_transport_3_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_transport_3_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 } 
  
-void transport_4(double *x, int *nx, double *val, double *err, int *status)
+void transport_4(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_transport_4_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_transport_4_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void transport_5(double *x, int *nx, double *val, double *err, int *status)
+void transport_5(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_transport_5_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_transport_5_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  

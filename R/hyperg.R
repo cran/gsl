@@ -1,24 +1,24 @@
 "hyperg_0F1" <- function(c, x, give=FALSE, strict=TRUE){
-  jj <- process.2.args(c,x)
+  jj <- process.args(c,x)
   c.vec <- jj$arg1
   x.vec <- jj$arg2
   attr <- jj$attr
 
   jj <- .C("hyperg_0F1_e",
-           as.double(x.vec),
            as.double(c.vec),
+           as.double(x.vec),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attributes(x)
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attributes(x)
-  attributes(status) <- attributes(x)
+  attributes(val) <- attr
+  attributes(err) <- attr  
+  attributes(status) <- attr
 
   if(strict){
     val <- strictify(val,status)
@@ -32,7 +32,7 @@
 }  
 
 "hyperg_1F1_int" <- function(m, n, x, give=FALSE, strict=TRUE){
-  jj <- process.3.args(m,n,x)
+  jj <- process.args(m,n,x)
   m.vec <- jj$arg1
   n.vec <- jj$arg2
   x.vec <- jj$arg3
@@ -45,14 +45,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -69,7 +69,7 @@
 
 
 "hyperg_1F1" <- function(a, b, x, give=FALSE, strict=TRUE){
-  jj <- process.3.args(a,b,x)
+  jj <- process.args(a,b,x)
   a.vec <- jj$arg1
   b.vec <- jj$arg2
   x.vec <- jj$arg3
@@ -82,14 +82,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -104,7 +104,7 @@
 }
 
 "hyperg_U_int" <- function(m, n, x, give=FALSE, strict=TRUE){
-  jj <- process.3.args(m,n,x)
+  jj <- process.args(m,n,x)
   m.vec <- jj$arg1
   n.vec <- jj$arg2
   x.vec <- jj$arg3
@@ -117,14 +117,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -140,7 +140,7 @@
 
 
 "hyperg_U" <- function(a, b, x, give=FALSE, strict=TRUE){
-  jj <- process.3.args(a,b,x)
+  jj <- process.args(a,b,x)
   a.vec <- jj$arg1
   b.vec <- jj$arg2
   x.vec <- jj$arg3
@@ -153,15 +153,16 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
+
 
   if(strict){
     val <- strictify(val,status)
@@ -175,7 +176,7 @@
 }
 
 "hyperg_2F1" <- function(a, b, c, x, give=FALSE, strict=TRUE){
-  jj <- process.4.args(a, b, c, x)
+  jj <- process.args(a, b, c, x)
   a.vec <- jj$arg1
   b.vec <- jj$arg2
   c.vec <- jj$arg3
@@ -190,15 +191,16 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
+
 
   if(strict){
     val <- strictify(val,status)
@@ -212,7 +214,7 @@
 }  
 
 "hyperg_2F1_conj" <- function(aR, aI, c, x, give=FALSE, strict=TRUE){
-  jj <- process.4.args(aR,aI,c,x)
+  jj <- process.args(aR,aI,c,x)
   aR.vec <- jj$arg1
   aI.vec <- jj$arg2
   c.vec <- jj$arg3
@@ -227,14 +229,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -249,7 +251,7 @@
 }
 
 "hyperg_2F1_renorm" <- function(a, b, c, x, give=FALSE, strict=TRUE){
-  jj <- process.4.args(a,b,c,x)
+  jj <- process.args(a,b,c,x)
   a.vec <- jj$arg1
   b.vec <- jj$arg2
   c.vec <- jj$arg3
@@ -264,14 +266,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -286,7 +288,7 @@
 }  
 
 "hyperg_2F1_conj_renorm" <- function(aR, aI, c, x, give=FALSE, strict=TRUE){
-  jj <- process.4.args(aR,aI,c,x)
+  jj <- process.args(aR,aI,c,x)
   aR.vec <- jj$arg1
   aI.vec <- jj$arg2
   c.vec <- jj$arg3
@@ -301,14 +303,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){
@@ -323,7 +325,7 @@
 }  
 
 "hyperg_2F0" <- function(a, b, x, give=FALSE, strict=TRUE){
-  jj <- process.3.args(a,b,x)
+  jj <- process.args(a,b,x)
   a.vec <- jj$arg1
   b.vec <- jj$arg2
   x.vec <- jj$arg3
@@ -336,14 +338,14 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attr
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attr
+  attributes(val) <- attr
+  attributes(err) <- attr  
   attributes(status) <- attr
 
   if(strict){

@@ -1,17 +1,17 @@
 "gegenpoly_1" <- function(lambda, x, give=FALSE, strict=TRUE){
 
-  jj <- process.2.args(lambda,x)
-  lambda.single <- jj$arg1
+  jj <- process.args(lambda,x)
+  lambda.vec <- jj$arg1
   x.vec <- jj$arg2
   attr <- jj$attr
   
   jj <- .C("gegenpoly_1_e",
+           as.double(lambda.vec),
            as.double(x.vec),
-           as.double(lambda.single),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -34,18 +34,18 @@
 
 "gegenpoly_2" <- function(lambda, x, give=FALSE, strict=TRUE){
 
-  jj <- process.2.args(lambda,x)
-  lambda.single <- jj$arg1
+  jj <- process.args(lambda,x)
+  lambda.vec <- jj$arg1
   x.vec <- jj$arg2
   attr <- jj$attr
   
   jj <- .C("gegenpoly_2_e",
+           as.double(lambda.vec),
            as.double(x.vec),
-           as.double(lambda.single),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -66,21 +66,20 @@
   }
 }
 
-
 "gegenpoly_3" <- function(lambda, x, give=FALSE, strict=TRUE){
 
-  jj <- process.2.args(lambda,x)
-  lambda.single <- jj$arg1
+  jj <- process.args(lambda,x)
+  lambda.vec <- jj$arg1
   x.vec <- jj$arg2
   attr <- jj$attr
   
   jj <- .C("gegenpoly_3_e",
+           as.double(lambda.vec),
            as.double(x.vec),
-           as.double(lambda.single),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -105,7 +104,7 @@
 "gegenpoly_n" <- function(n, lambda, x, give=FALSE, strict=TRUE){
 
   if(length(n)>1){stop("length of n should be 1")}
-  jj <- process.2.args(lambda,x)
+  jj <- process.args(lambda,x)
   lambda.single <- jj$arg1
   x.vec <- jj$arg2
   attr <- jj$attr
@@ -117,7 +116,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -140,7 +139,7 @@
 
 "gegenpoly_array" <- function(nmax, lambda, x, give=FALSE,strict=TRUE){
   if(length(nmax)>1){stop("nmax should be of length 1")}
-  jj <- process.2.args(lambda,x)
+  jj <- process.args(lambda,x)
   lambda.single <- jj$arg1
   x.vec<- jj$arg2
   attr <- jj$attr
@@ -152,7 +151,7 @@
            as.double(x.vec),
            as.integer(length(x.vec)),
            val=as.double(x.out),
-           status=as.integer(x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
 

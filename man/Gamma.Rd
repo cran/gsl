@@ -2,6 +2,7 @@
 \alias{Gamma}
 \alias{gsl_sf_gamma}
 \alias{lngamma}
+\alias{lngamma_sgn}
 \alias{gammastar}
 \alias{gammainv}
 \alias{lngamma_complex}
@@ -30,6 +31,7 @@
 \usage{
 gsl_sf_gamma(x,give=FALSE,strict=TRUE)
 lngamma(x,give=FALSE,strict=TRUE)
+lngamma_sgn(x,give=FALSE,strict=TRUE)
 gammastar(x,give=FALSE,strict=TRUE)
 gammainv(x,give=FALSE,strict=TRUE)
 lngamma_complex(zr, zi=NULL, r.and.i=TRUE, give=FALSE, strict=TRUE)
@@ -74,16 +76,26 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
 \examples{
 gsl_sf_gamma(3)
 
-lngamma_complex(1+seq(from=0,to=5,by=0.1)*1i)  #table 6.7, p 277
+lngamma_complex(1+seq(from=0,to=5,by=0.1)*1i)  #table 6.7, p 277 (LH col)
+                                               #note 2pi phase diff
 
+
+jj <- expand.grid(1:10,2:5)
+x <- taylorcoeff(jj$Var1,jj$Var2)
+dim(x) <- c(10,4)
+x    #table 23.5, p818
+
+
+jj <- expand.grid(36:50,9:13)
+x <- gsl_sf_choose(jj$Var1,jj$Var2)
+dim(x) <- c(15,5)
+x     #table 24.1, p829  (bottom bit)
 
 
 
 gamma_inc(1.2,1.3)
 beta(1.2, 1.3)
-
 lnbeta(1.2,1.55)
-
 beta_inc(1.2,1.4,1.6)
 
 

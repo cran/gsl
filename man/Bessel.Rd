@@ -138,24 +138,72 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 \author{Robin K. S. Hankin}
 \examples{
 
-x <- seq(from=0,to=15,len=100)
-plot(x,bessel_J0(x),xlim=c(0,15),ylim=c(-0.8,1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
-axis(1,pos=0)
-axis(2,pos=0)
-lines(x,bessel_Y0(x))
+
+
+x <- seq(from=0,to=15,len=1000)
+
+plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
+
+jj.Y0 <- bessel_Y0(x)
+jj.Y0[jj.Y0< -0.8] <- NA
+lines(x,jj.Y0)
+
 lines(x,bessel_J1(x),lty=2)
-lines(x,bessel_Y1(x),lty=2)
+
+jj.Y1 <- bessel_Y1(x)
+jj.Y1[jj.Y1< -0.8] <- NA
+lines(x,jj.Y1,lty=2)
+axis(1,pos=0,at=1:15,
+     labels=c("","2","","4","","6","","8","","10","","12","","14","") )
+axis(2,pos=0,at=seq(from=-8,to=10,by=2)/10,
+labels=c("-.8","-.6","-.4","-.2","0",".2",".4",".6",".8","1.0"))
+arrows(0,0,16,0,length=0.1,angle=10)
+arrows(0,0,0,1.1,length=0.1,angle=10)
+text(1.1, 0.83, expression(J[0]))
+text(0.37, 0.3, expression(J[1]))
+text(0.34,-0.3, expression(Y[0]))
+text(1.7,-0.5, expression(Y[1]))
+text(4.2, 0.43, expression(Y[1]))
+text(7.2, 0.33, expression(J[0]))
+text(8.6, 0.3, expression(J[0],paste("    ,")))
+text(9.1, 0.3, expression(Y[0]))
+
+
 
 x <- seq(from=0,to=13,len=100)
- matplot(x,t(bessel_jl_array(3,x)),col="black",type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 10.1, p438")
-axis(1,pos=0)
-axis(2,pos=0)
+y <- t(bessel_jl_array(3,x))
+y[y>0.6] <- NA
+ matplot(x,y,col="black",type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",xlim=c(0,16),ylim=c(-0.3,0.75),main="Figure 10.1, p438")
+axis(1,pos=0,at=2*(1:7))
+arrows(0,0,15,0,length=0.1,angle=10)
+arrows(0,0,0,0.65,length=0.1,angle=10)
+axis(2,pos=0,las=1,at=seq(from=-3,to=6)/10,labels=c("-.3","-.2","-.1","0",".1",".2",".3",".4",".5",".6"))
+text(0, 0.7, expression(J[n](x)))
+text(15.5, 0, expression(x))
+text(2.2,0.58,expression(n==0))
+text(3.2,0.4,expression(n==1))
+text(4.3,0.3,expression(n==2))
+text(6.0,0.22,expression(n==3))
+
 
 
 x <- seq(from=0 ,to=5,by=0.1)
 cbind(x, bessel_J0(x),bessel_J1(x),bessel_Jn(2,x))      #table 9.1, p390
 cbind(x, bessel_Y0(x),bessel_Y1(x),bessel_Yn(2,x))      #table 9.2, p391
 t(bessel_Jn_array(3,9,x*2))                             #table 9.2, p398
+
+
+
+ x <- seq(from=8,to=10,by=0.2)
+ jj <- t(bessel_Jn(n=3:9,x=t(matrix(x,11,7))))
+colnames(jj) <- paste("J",3:9,"(x)",sep="")
+cbind(x,jj)                 #another part of table 9.2, p398
+
+
+ x <- seq(from=8,to=10,by=0.2)
+ jj <- t(bessel_Yn(n=3:9,x=t(matrix(x,11,7))))
+colnames(jj) <- paste("J",3:9,"(x)",sep="")
+cbind(x,jj)                 #part of table 9.2, p399
 
 cbind(                       x,                         #table 9.8, p416
         exp(-x)*bessel_I0  (x),
@@ -178,25 +226,7 @@ cbind(x,                                                #table 10.1 , p457
     bessel_y2(x)
 )
 
-
-bessel_Jnu(0.5,1.123)
-bessel_Ynu(0.5,1.123)
-bessel_Inu(0.5,1.123)
-bessel_Inu_scaled(0.5,1.123)
-
-bessel_Knu(0.5,1.123)
-bessel_lnKnu(0.5,1.123)
-bessel_Knu_scaled(0.5,1.123)
-
-x <- 1:20
-cbind(x,bessel_zero_J0(x), bessel_zero_J1(x), bessel_zero_Jnu(n=3,x))
-#Table 9.5, p409, odd columns
-
-
-
-
-\dontrun{
-bessel_sequence_Jnu(nu=0.5,v=c(0.4,0.44,0.55))
-}
+ cbind(0:9,"x=1"=bessel_yl(l=0:9,x=1), "x=2"=bessel_yl(l=0:9,x=2), "x=5"=bessel_yl(l=0:9,x=5)) 
+                                                        #table 10.5, p466, top
 }
 \keyword{array}

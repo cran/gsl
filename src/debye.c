@@ -5,51 +5,54 @@
    debye_1. */
 
 
-void debye_1(double *x, int *nx, double *val, double *err, int *status)
+void debye_1(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_debye_1_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_debye_1_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
-void debye_2(double *x, int *nx, double *val, double *err, int *status)
+
+void debye_2(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_debye_2_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
-}  
-void debye_3(double *x, int *nx, double *val, double *err, int *status)
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_debye_2_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
+} 
+ 
+void debye_3(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_debye_3_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
-}  
-void debye_4(double *x, int *nx, double *val, double *err, int *status)
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_debye_3_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
+}
+  
+void debye_4(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_debye_4_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_debye_4_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  

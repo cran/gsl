@@ -4,15 +4,15 @@
    of the name.  Thus gsl_sf_dawson  goes to dawson. */
 
 
-void clausen_e(double *x, int *nx, double *val, double *err, int *status)
+void clausen_e(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_clausen_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_clausen_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  

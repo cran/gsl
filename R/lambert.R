@@ -1,19 +1,20 @@
 "lambert_W0" <- function(x,give=FALSE,strict=TRUE){
+  attr <- attributes(x)
   x.vec <- as.vector(x)
   jj <- .C("lambert_W0",
            as.double(x.vec),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attributes(x)
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attributes(x)
-  attributes(status) <- attributes(x)
+  attributes(val) <- attr
+  attributes(err) <- attr  
+  attributes(status) <- attr
 
   if(strict){
     val <- strictify(val,status)
@@ -26,21 +27,22 @@
 } 
 
 "lambert_Wm1" <- function(x,give=FALSE,strict=TRUE){
+  attr <- attributes(x)
   x.vec <- as.vector(x)
   jj <- .C("lambert_Wm1",
            as.double(x.vec),
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
-  attributes(val) <- attributes(x)
   err <- jj$err
   status <- jj$status
-  attributes(err) <- attributes(x)
-  attributes(status) <- attributes(x)
+  attributes(val) <- attr
+  attributes(err) <- attr  
+  attributes(status) <- attr
 
   if(strict){
     val <- strictify(val,status)

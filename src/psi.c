@@ -5,84 +5,84 @@
    psi_1. */
 
 
-void psi_int(int *n, int *nn, double *val, double *err, int *status)
+void psi_int(int *n, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nn ; i++){
-    status[i]  = gsl_sf_psi_int_e(n[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_int_e(n[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void psi(double *x, int *nx, double *val, double *err, int *status)
+void psi(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_psi_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void psi_1piy(double *y, int *ny, double *val, double *err, int *status)
+void psi_1piy(double *y, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *ny ; i++){
-    status[i]  = gsl_sf_psi_1piy_e(y[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_1piy_e(y[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
 
 
 
-void psi_1_int(int *n, int *nn, double *val, double *err, int *status)
+void psi_1_int(int *n, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nn ; i++){
-    status[i]  = gsl_sf_psi_1_int_e(n[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_1_int_e(n[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void psi_1(double *x, int *nx, double *val, double *err, int *status)
+void psi_1(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_psi_1_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_1_e(x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void psi_n(int *m, double *x, int *nx, double *val, double *err, int *status)
+void psi_n(int *m, double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_psi_n_e(m[i], x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_psi_n_e(m[i], x[i], &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 

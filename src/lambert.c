@@ -4,30 +4,29 @@
    of the name and the _e from the end.  Thus gsl_sf_lambert_W0 goes
    to lambert_W0. */
 
-void lambert_W0(double *x, int *nx, double *val, double *err, int *status)
+void lambert_W0(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();  
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();  
 
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_lambert_W0_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_lambert_W0_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-
-void lambert_Wm1(double *x, int *nx, double *val, double *err, int *status)
+void lambert_Wm1(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();  
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();  
 
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_lambert_Wm1_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_lambert_Wm1_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 

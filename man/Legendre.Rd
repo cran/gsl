@@ -12,31 +12,52 @@
 \alias{legendre_Plm_array}
 \alias{legendre_sphPlm}
 \alias{legendre_sphPlm_array}
+\alias{conicalP_half}
+\alias{conicalP_mhalf}
+\alias{conicalP_0}
+\alias{conicalP_1}
+\alias{conicalP_sph_reg}
+\alias{conicalP_cyl_reg}
+\alias{legendre_H3d_0}
+\alias{legendre_H3d_1}
+\alias{legendre_H3d}
+\alias{legendre_H3d_array}
 \title{Legendre functions}
 \description{
 Legendre functons as per the Gnu Scientific Library reference manual
 section 7.24
 }
 \usage{
-legendre_P1  (x,give=FALSE,strict=TRUE)
-legendre_P2  (x, give=FALSE,strict=TRUE)
-legendre_P3  (x, give=FALSE,strict=TRUE)
-legendre_Pl  (l,x, give=FALSE,strict=TRUE)
-legendre_Pl_array(lmax,x,give=FALSE,strict=TRUE)
-legendre_Q0  (x, give=FALSE,strict=TRUE)
-legendre_Q1  (x, give=FALSE,strict=TRUE)
-legendre_Ql  (l,x, give=FALSE,strict=TRUE)
-legendre_Plm(l,m,x, give=FALSE,strict=TRUE)
-legendre_Plm_array(lmax,m,x,give=FALSE,strict=TRUE)
-legendre_sphPlm(l,m,x, give=FALSE,strict=TRUE)
-legendre_sphPlm_array(lmax,m,x,give=FALSE,strict=TRUE)
-  
+legendre_P1(x, give=FALSE, strict=TRUE)
+legendre_P2(x, give=FALSE, strict=TRUE)
+legendre_P3(x, give=FALSE, strict=TRUE)
+legendre_Pl(l, x, give=FALSE, strict=TRUE)
+legendre_Pl_array(lmax, x, give=FALSE, strict=TRUE)
+legendre_Q0(x, give=FALSE, strict=TRUE)
+legendre_Q1(x, give=FALSE, strict=TRUE)
+legendre_Ql(l, x, give=FALSE, strict=TRUE)
+legendre_Plm(l, m, x, give=FALSE, strict=TRUE)
+legendre_Plm_array(lmax, m, x, give=FALSE, strict=TRUE)
+legendre_sphPlm(l, m, x, give=FALSE, strict=TRUE)
+legendre_sphPlm_array(lmax, m, x, give=FALSE, strict=TRUE)
+conicalP_half(lambda, x, give=FALSE, strict=TRUE)  
+conicalP_mhalf(lambda, x, give=FALSE, strict=TRUE)  
+conicalP_0(lambda, x, give=FALSE, strict=TRUE)  
+conicalP_1(lambda, x, give=FALSE, strict=TRUE)  
+conicalP_sph_reg(l, lambda, x, give=FALSE, strict=TRUE)  
+conicalP_cyl_reg(m, lambda, x, give=FALSE, strict=TRUE)
+legendre_H3d_0(lambda, eta, give=FALSE, strict=TRUE)
+legendre_H3d_1(lambda, eta, give=FALSE, strict=TRUE)
+legendre_H3d(l, lambda, eta, give=FALSE, strict=TRUE)
+legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{x}{input: real values}
   \item{l}{input: integer values}
   \item{m}{input: integer values}
   \item{lmax}{input: integer values}
+  \item{lambda}{input: real values}
+  \item{eta}{input: real values}
   \item{give}{Boolean, with default \code{FALSE} meaning to
     return just the answers, and \code{TRUE} meaning to return a status
     vector as well.}
@@ -53,7 +74,7 @@ legendre_sphPlm_array(lmax,m,x,give=FALSE,strict=TRUE)
  lines(theta,legendre_P3(cos(theta)),type="l")
 
 x <- seq(from=0,to=1,len=600)
-plot(x, legendre_Plm(3,1,x), type="l",lty=3,main="Figure 8.2 of A and S")
+plot(x, legendre_Plm(3,1,x), type="l",lty=3,main="Figure 8.2 of A and S: note sign error")
 lines(x,legendre_Plm(2,1,x), type="l",lty=2)
 lines(x,legendre_Plm(1,1,x), type="l",lty=1)
 abline(0,0)
@@ -66,10 +87,10 @@ lines(x,legendre_Ql(3,x),lty=4)
 abline(0,0)
 
 #table 8.1 of A&S:
-t(legendre_Pl_array(10,seq(from=0,to=1,by=0.01))[1+c(2,3,9,10),])
+t(legendre_Pl_array(10, seq(from=0,to=1,by=0.01))[1+c(2,3,9,10),])
 
 #table 8.3:
-f <- function(n){legendre_Ql(n,seq(from=0,to=1,by=0.01))}
+f <- function(n){legendre_Ql(n, seq(from=0,to=1,by=0.01))}
 sapply(c(0,1,2,3,9,10),f)
 
 

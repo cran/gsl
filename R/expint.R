@@ -5,7 +5,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -33,7 +33,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -61,7 +61,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -88,7 +88,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -116,7 +116,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -144,7 +144,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -172,7 +172,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -200,7 +200,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val
@@ -228,7 +228,7 @@
            as.integer(length(x.vec)),
            val=as.double(x.vec),
            err=as.double(x.vec),
-           status=seq(along=x.vec),
+           status=as.integer(0*x.vec),
            PACKAGE="gsl"
            )
   val <- jj$val

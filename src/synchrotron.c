@@ -4,28 +4,28 @@
    of the name.  Thus gsl_sf_synchrotron  goes to synchrotron. */
 
 
-void synchrotron_1(double *x, int *nx, double *val, double *err, int *status)
+void synchrotron_1(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_synchrotron_1_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_synchrotron_1_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
 
-void synchrotron_2(double *x, int *nx, double *val, double *err, int *status)
+void synchrotron_2(double *x, int *len, double *val, double *err, int *status)
 {
-  int i;
-  gsl_sf_result result;
-  gsl_set_error_handler_off();
+	int i;
+	gsl_sf_result result;
+	gsl_set_error_handler_off();
   
-  for(i = 0; i< *nx ; i++){
-    status[i]  = gsl_sf_synchrotron_2_e(x[i] , &result) ;
-    val[i] = result.val;
-    err[i] = result.err;
-  }
+	for(i = 0; i< *len ; i++){
+		status[i] = gsl_sf_synchrotron_2_e(x[i] , &result) ;
+		val[i] = result.val;
+		err[i] = result.err;
+	}
 }  
