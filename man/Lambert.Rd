@@ -20,4 +20,9 @@ lambert_Wm1(x, give=FALSE,strict=TRUE)
 }
 \references{\url{http://www.gnu.org/software/gsl}}  
 \author{Robin K. S. Hankin}
+\examples{
+a <- runif(6)
+L <- lambert_W0(a)
+print(L*exp(L) - a)
+}
 \keyword{array}

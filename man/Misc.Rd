@@ -41,12 +41,6 @@ strictify(val,status)
   If \code{TRUE}, error information and the status (see preceding
   paragraph) is also returned.
 
-  Package version numbers match GSL library numbers, in that gsl package
-  x.y-z will require gsl library version x.y.  Neither forward nor
-  backward compatibility is guaranteed, although the configure.ac file
-  specifies a minimum GSL version (ie it specifies a version >= 1.5, or
-  whatever). 
-  
   The function naming scheme directly copies the GSL manual except that
   leading \code{gsl_sf_} and, if present, the trailing \code{_e} is
   stripped: thus \code{gsl_sf_Airy_Ai_e} goes to \R\ function

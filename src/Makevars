@@ -1,2 +1,3 @@
 PKG_LIBS=-lgsl -lgslcblas
-CFLAGS=-Wall -pedantic
+
+
