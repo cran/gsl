@@ -7,8 +7,9 @@
 \alias{debye_4}
 \title{Debye functions}
 \description{
-Debye functons as per the Gnu Scientific Library, section 7.10 of the
-reference manual.
+  Debye functions as per the Gnu Scientific Library, section 7.10 of the
+  reference manual.  These functions are declared in header file
+  \code{gsl_sf_debye.h}
 }
 \usage{
 debye_1(x, give=FALSE, strict=TRUE)
@@ -19,9 +20,9 @@ debye_4(x, give=FALSE, strict=TRUE)
 \arguments{
   \item{x}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

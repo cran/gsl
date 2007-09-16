@@ -58,8 +58,9 @@
 \alias{bessel_zero_Jnu}
 \title{Bessel functions}
 \description{
-Bessel functons as per the Gnu Scientific Library, reference manual
-section 7.5
+  Bessel functions as per the Gnu Scientific Library, reference manual
+  section 7.5 and AMS-55, chapters 9 and 10.  These functions are
+  declared in header file \code{gsl_sf_bessel.h}
 }
 \usage{
 bessel_J0(x, give=FALSE, strict=TRUE)
@@ -133,9 +134,6 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 \author{Robin K. S. Hankin}
 \references{\url{http://www.gnu.org/software/gsl}}
 \examples{
-
-
-
 x <- seq(from=0,to=15,len=1000)
 plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
 jj.Y0 <- bessel_Y0(x)

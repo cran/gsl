@@ -11,8 +11,9 @@
 \alias{coulomb_CL_array}
 \title{Coulomb functions}
 \description{
-Dawson functons as per the Gnu Scientific Library, reference manual
-section 7.7 and Abramowitz and Stegun chapter 14
+  Coulomb functions as per the Gnu Scientific Library, reference manual
+  section 7.7 and AMS-55, chapter 14.  These functions are declared
+  in header file \code{gsl_sf_coulomb.h}
 }
 \usage{
 hydrogenicR_1(Z, r, give=FALSE, strict=TRUE)
@@ -29,7 +30,7 @@ coulomb_CL_array(L_min, kmax, eta, give=FALSE,strict=TRUE)
   \item{n,l,kmax}{input: integers}
   \item{Z,r,eta,x,L_F,L_min,k,L}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }

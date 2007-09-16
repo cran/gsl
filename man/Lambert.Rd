@@ -8,7 +8,8 @@
 \title{Lambert's W  function}
 \description{
   Lambert's W function as per the Gnu Scientific Library reference manual
-  section 7.23
+  section 7.23.  These functions are declared in header file
+  \code{gsl_sf_lamber.h} 
 }
 \usage{
 lambert_W0(x, give=FALSE, strict=TRUE)

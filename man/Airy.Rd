@@ -25,8 +25,10 @@
 \alias{airy_zero_Bi_deriv_e}
 \title{Airy functions}
 \description{
-Airy functons as per the Gnu Scientific Library, reference manual
-section 7.4}
+  Airy functions as per the Gnu Scientific Library, reference manual
+  section 7.4 and AMS-55, section 10.4.  Thes functions are declared
+  in header file \code{gsl_sf_airy.h}
+  }
 \usage{
 airy_Ai(x, mode=0, give=FALSE, strict=TRUE)
 airy_Ai_scaled(x, mode=0, give=FALSE, strict=TRUE)

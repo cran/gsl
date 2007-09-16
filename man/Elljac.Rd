@@ -15,7 +15,9 @@
 \alias{dc}
 \title{Elliptic functions}
 \description{
-Elljac functons as per the Gnu Scientific Library, section 7.14
+  Elljac functions as per the Gnu Scientific Library, reference manual
+  section 7.14 and AMS-55, chapter 16.  These functions are
+  declared in header file \code{gsl_sf_elljac.h}
 }
 \usage{
 elljac(u, m, give=FALSE, strict=TRUE)

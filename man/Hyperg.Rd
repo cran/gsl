@@ -12,8 +12,9 @@
 \alias{hyperg_2F0}
 \title{Hypergeometric functions}
 \description{
-Hypergeometric functons as per the Gnu Scientific Library ref manual
-section 7.21 and Abramowitz and Stegun section 15
+  Hypergeometric functions as per the Gnu Scientific Library reference manual
+  section 7.21 and AMS-55, chapters 13 and 15.  These functions are
+  declared in header file \code{gsl_sf_hyperg.h}
 }
 \usage{
 hyperg_0F1(c, x, give=FALSE, strict=TRUE)

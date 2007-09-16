@@ -8,8 +8,9 @@
 \alias{psi_n}
 \title{Psi (digamma) functions}
 \description{
-Psi (digamma) functons as per the Gnu Scientific Library, section 7.27 of the
-reference manual.
+  Psi (digamma) functions as per the Gnu Scientific Library, reference
+  manual section 7.27.  These functions are declared in header file
+  \code{gsl_sf_psi.h} 
 }
 \usage{
 psi_int(n, give=FALSE, strict=TRUE)

@@ -22,10 +22,13 @@
 \alias{legendre_H3d_1}
 \alias{legendre_H3d}
 \alias{legendre_H3d_array}
+\alias{conical}
+\alias{Conical}
 \title{Legendre functions}
 \description{
-Legendre functons as per the Gnu Scientific Library reference manual
-section 7.24
+  Legendre functions as per the Gnu Scientific Library reference manual
+  section 7.24, and AMS-55, chapter 8.  These functions are declared in
+  header file \code{gsl_sf_legendre.h}
 }
 \usage{
 legendre_P1(x, give=FALSE, strict=TRUE)

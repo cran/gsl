@@ -12,8 +12,9 @@
 \alias{fermi_dirac_inc_0}
 \title{Fermi-Dirac functions}
 \description{
-Fermi-Dirac functons as per the Gnu Scientific Library, reference manual
-section 7.18
+  Fermi-Dirac functions as per the Gnu Scientific Library, reference
+  manual section 7.18.  These functions are declared in header file
+  \code{gsl_sf_fermi_dirac.h}
 }
 \usage{
 fermi_dirac_m1(x, give=FALSE, strict=TRUE)

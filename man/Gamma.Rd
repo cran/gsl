@@ -26,7 +26,8 @@
 \title{gamma functions}
 \description{
  Gamma functions as per the Gnu Scientific Library reference manual
- section 7.19
+ section 7.19.  These functions are declared in header file
+ \code{gsl_sf_gamma.h} 
 }
 \usage{
 gsl_sf_gamma(x,give=FALSE,strict=TRUE)
@@ -69,8 +70,15 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }
-\details{All functions as documented in the GSL reference manual section
-  7.19.}
+\details{
+
+  All functions as documented in the GSL reference manual section 7.19.
+
+  Note that \code{gamma_inc_P()} gives the area of the left tail of the
+  gamma distribution so, for example, \code{gamma_inc_P(1.8, 5) =
+  pgamma(5, 1.8)} to numerical accuracy.
+
+}
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
 \examples{
@@ -91,12 +99,12 @@ x <- gsl_sf_choose(jj$Var1,jj$Var2)
 dim(x) <- c(15,5)
 x     #table 24.1, p829  (bottom bit)
 
-
-
 gamma_inc(1.2,1.3)
 beta(1.2, 1.3)
 lnbeta(1.2,1.55)
 beta_inc(1.2,1.4,1.6)
+
+gamma_inc_P(1.8, 5) - pgamma(5, 1.8)  # should be small
 
 }
 \keyword{array}

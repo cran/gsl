@@ -5,8 +5,9 @@
 \alias{coupling_9j}
 \title{Coupling functions}
 \description{
-Coupling functons as per the Gnu Scientific Library, reference manual
-section 7.8
+  Coupling functions as per the Gnu Scientific Library, reference manual
+  section 7.8.  These functions are declared in header file
+  \code{gsl_sf_coupling.h}
 }
 \usage{
 coupling_3j(two_ja, two_jb, two_jc, two_ma, two_mb, two_mc, give=FALSE, strict=TRUE)

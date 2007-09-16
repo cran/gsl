@@ -11,7 +11,9 @@
 \alias{lncosh}
 \title{Trig functions}
 \description{
-Trig functons as per the Gnu Scientific Library, section 7.30
+  Trig functions as per the Gnu Scientific Library, reference manual
+  section 7.30.  These functions are declared in header file
+  \code{gsl_sf_trig.h} 
 }
 \usage{
 gsl_sf_sin(x, give=FALSE, strict=TRUE)

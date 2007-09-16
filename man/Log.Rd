@@ -7,8 +7,9 @@
 \alias{log_1plusx_mx}
 \title{Log functions}
 \description{
-Log functons as per the Gnu Scientific Library, reference manual
-section 7.25
+Log functions as per the Gnu Scientific Library, reference manual
+section 7.25 and AMS-55, chapter 4.  These functions are declared in
+header file \code{gsl_sf_log.h}
 }
 \usage{
 gsl_sf_log(x, give=FALSE, strict=TRUE)

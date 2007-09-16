@@ -11,7 +11,9 @@
 \alias{atanint}
 \title{exponential functions}
 \description{
-Expint functions as per the Gnu Scientific Library and A&S
+  Expint functions as per the Gnu Scientific Library, reference manual
+  section 7.17 and AMS-55, chapter 5.  These functions are declared in
+  header file \code{gsl_sf_expint.h}
 }
 \usage{
 expint_E1(x,give=FALSE,strict=TRUE)

@@ -12,8 +12,9 @@
 \alias{ellint_RJ}
 \title{Elliptic functions}
 \description{
-  Elliptic functons as per the Gnu Scientific Library.  See section 7.13
-  of the ref manual for  details.
+  Elliptic functions as per the Gnu Scientific Library, reference manual
+  section 7.13 and AMS-55, chapter 17.  These functions are
+  declared in header file \code{gsl_sf_ellint.h}
 }
 \usage{
 ellint_Kcomp(k, mode=0, give=FALSE,strict=TRUE)

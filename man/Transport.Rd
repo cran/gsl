@@ -7,9 +7,9 @@
 \alias{transport_5}
 \title{Transport functions}
 \description{
-Transport functons as per the Gnu Scientific Library, reference
-section 7.29
-
+  Transport functions as per the Gnu Scientific Library,  reference manual 
+  section 7.29.  These functions are defined in header file
+  \code{gsl_sf_transport.h} 
 }
 \usage{
 transport_2(x, give=FALSE, strict=TRUE)

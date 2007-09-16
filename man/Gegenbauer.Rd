@@ -8,7 +8,9 @@
 \alias{gegenpoly_array}
 \title{Gegenbauer functions}
 \description{
-Gegenbauer functions as per the Gnu Scientific Library section 7.20 and A&S
+  Gegenbauer functions as per the Gnu Scientific Library reference manual
+  section 7.20, and AMS-55, chapter 22.  These functions are
+  declared in header file \code{gsl_sf_gegenbauer.h}
 }
 \usage{
 gegenpoly_1(lambda, x, give=FALSE,strict=TRUE)

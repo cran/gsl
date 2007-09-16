@@ -8,7 +8,12 @@
 \alias{qrng_size}
 \alias{qrng_get}
 \title{Quasi-random sequences}
-\description{Quasi-random sequences from the Gnu Scientific Library }
+\description{
+
+  Quasi-random sequences as per the Gnu Scientific Library, reference
+  manual section 18.  These functions are declared in header file
+  \code{gsl_qrng.h} 
+}
 \usage{
 qrng_alloc(type = c("niederreiter_2", "sobol"), dim)
 qrng_clone(q)
@@ -18,10 +23,10 @@ qrng_size(q)
 qrng_get(q, n = 1)
 }
 \arguments{
-  \item{type}{ Type of sequence }
-  \item{dim}{ Dimension of sequence }
-  \item{q}{ Generator from \code{qrng_alloc} or \code{qrng_clone} }
-  \item{n}{ How many vectors to generate }
+  \item{type}{Type of sequence}
+  \item{dim}{Dimension of sequence}
+  \item{q}{Generator from \code{qrng_alloc} or \code{qrng_clone}}
+  \item{n}{How many vectors to generate}
 }
 \details{
     These are wrappers for the quasi-random sequence
