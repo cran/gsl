@@ -1,5 +1,5 @@
 Package: gsl
-Version: 1.8-13
+Version: 1.8-14
 Date: 16-09-2007
 Title: wrapper for the Gnu Scientific Library
 Author: Robin K. S. Hankin; qrng functions by Duncan Murdoch and
@@ -12,6 +12,6 @@ Description: An R wrapper for the special functions and quasi random
         functions that are widely used in the package.
 Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 License: GPL-2
-Packaged: Tue Mar 17 22:58:33 2009; rksh
+Packaged: Wed Apr 15 22:15:35 2009; rksh
 Repository: CRAN
-Date/Publication: 2009-03-30 06:46:42
+Date/Publication: 2009-05-05 07:28:53

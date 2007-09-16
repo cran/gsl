@@ -62,7 +62,7 @@ legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
     return just the answers, and \code{TRUE} meaning to return a status
     vector as well}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if nonzero status is returned by the GSL function (\code{FALSE}
+    if nonzero status is returned by the \acronym{GSL} function (\code{FALSE}
     means to return the value: use with caution)}
 }
 \references{\url{http://www.gnu.org/software/gsl}}

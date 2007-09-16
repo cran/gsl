@@ -24,15 +24,15 @@ log_1plusx_mx(x, give=FALSE, strict=TRUE)
   \item{zr}{In \code{complex_log()}, the real part of the argument}
   \item{zi}{In \code{complex_log()}, the imaginary part of the
     argument.  If missing (ie takes the default value of \code{NULL}),
-    interpret \code{zr} as complex, even if real.}
+    interpret \code{zr} as complex, even if real}
   \item{r.and.i}{In \code{complex_log()}, Boolean variable with
     default value of \code{TRUE} meaning to return a complex variable as
     per the details section below; and \code{FALSE} meaning to return
-    the values as advertised in the GSL manual.}
+    the values as advertised in the \acronym{GSL} manual}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

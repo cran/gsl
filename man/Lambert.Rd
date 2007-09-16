@@ -5,11 +5,11 @@
 \alias{lambert_Wm1}
 \alias{Lambert_W0}
 \alias{Lambert_Wm1}
-\title{Lambert's W  function}
+\title{Lambert's W function}
 \description{
   Lambert's W function as per the Gnu Scientific Library reference manual
   section 7.23.  These functions are declared in header file
-  \code{gsl_sf_lamber.h} 
+  \code{gsl_sf_lambert.h} 
 }
 \usage{
 lambert_W0(x, give=FALSE, strict=TRUE)

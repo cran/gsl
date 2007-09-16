@@ -44,7 +44,7 @@ dc(z,m)
 }
 \details{
   A straightforward wrapper for the \code{gsl_sf_elljac_e}
-  function of the GSL library, except for \code{sn()}, \code{cn()}, and
+  function of the \acronym{GSL} library, except for \code{sn()}, \code{cn()}, and
   \code{dn()}, which implement 16.21.1 to 16.21.4  (thus taking complex
   arguments); and \code{ns()} et
   seq which are the minor elliptic functions.

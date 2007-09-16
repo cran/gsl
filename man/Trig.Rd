@@ -31,13 +31,13 @@ lncosh(x, give=FALSE, strict=TRUE)
   \item{zr}{In \code{gamma_complex()}, the real part of the argument}
   \item{zi}{In \code{complex_sin()} et seq, the imaginary part of the
     argument.  If missing (ie takes the default value of \code{NULL}),
-    interpret \code{zr} as complex, even if rea.}
+    interpret \code{zr} as complex, even if real}
   \item{r.and.i}{In \code{complex_sin()} et seq, Boolean variable with
     default value of \code{TRUE} meaning to return a complex variable as
     per the details section below; and \code{FALSE} meaning to return
-    the values as advertised in the GSL manual}
+    the values as advertised in the \acronym{GSL} manual}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
+    items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }

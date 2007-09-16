@@ -130,7 +130,7 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
     items: the value, an estimate of the error, and a status number}
   \item{strict}{strict or not}
 }
-\details{All as for the GSL reference manual section 7.5
+\details{All as for the \acronym{GSL} reference manual section 7.5
 }
 \author{Robin K. S. Hankin}
 \references{\url{http://www.gnu.org/software/gsl}}

@@ -30,11 +30,11 @@ strictify(val,status)
   attributes of the input argument with most elements where possible.
   
   Function \code{strictify()} uses the \code{status} value returned by
-  the \dQuote{error} form of the GSL special functions to make values
+  the \dQuote{error} form of the \acronym{GSL} special functions to make values
   returned with a nonzero \code{error} a \code{NaN}.  In most of the
   special functions, \code{strictify()} is called if argument
   \code{strict} takes its default value of \code{TRUE}.  Setting it to
-  \code{FALSE} sometimes returns a numerical value as per the GSL
+  \code{FALSE} sometimes returns a numerical value as per the \acronym{GSL}
   reference manual.
 
   In most of the special functions, if argument \code{give} takes its

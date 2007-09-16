@@ -48,16 +48,16 @@ airy_zero_Bi_deriv(n, give=FALSE, strict=TRUE)
   \item{x}{input: real values}
   \item{n}{input: integer values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
-    items: the value, an estimate of the error, and a status number.}
-  \item{mode}{input: mode.  For \code{GSL_PREC_DOUBLE} ,
+    items: the value, an estimate of the error, and a status number}
+  \item{mode}{input: mode.  For \code{GSL_PREC_DOUBLE},
     \code{GSL_PREC_SINGLE}, \code{GSL_PREC_APPROX} use \code{0,1,2}
-    respectively.}
+    respectively}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if status is an error.}
+    if status is an error}
 }
 \details{
   The zero functions return a status of \code{GSL_EDOM} and a value of
-  \code{NA} for \eqn{n\leq 0}{n\leq 0}
+  \code{NA} for \eqn{n\leq 0}{n <= 0}
   }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

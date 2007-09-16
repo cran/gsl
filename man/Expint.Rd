@@ -39,7 +39,7 @@ atanint(x, give=FALSE, strict=TRUE)
 }
 \note{
 
-  Function \code{expint_En()} requires GSL version 1.8 or later.
+  Function \code{expint_En()} requires \acronym{GSL} version 1.8 or later.
   
 }
 \references{\url{http://www.gnu.org/software/gsl}}

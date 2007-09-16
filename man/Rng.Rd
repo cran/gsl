@@ -29,7 +29,7 @@ rng_uniform_pos(r, length)
 \arguments{
   \item{type}{In function \code{rng_alloc()}, type of random number generator.
     This argument is taken to be a character string which is matched to
-    the names of the random number generators given in the GSL manual
+    the names of the random number generators given in the \acronym{GSL} manual
     section 17.9, with the initial \dQuote{\code{gsl_rng_}} removed
     (for example, to use generator \code{gsl_rng_ranlux}, set
     \code{type} to \code{ranlux}).  Partial matching is used; a null
@@ -43,7 +43,7 @@ rng_uniform_pos(r, length)
 }
 \details{
 	These are wrappers for the random number generator
-functions from the GSL \url{http://www.gnu.org/software/gsl} with
+functions from the \acronym{GSL} \url{http://www.gnu.org/software/gsl} with
 arguments corresponding to those from the library.
 Calling \code{rng_free} is not necessary as R performs garbage
 collection automatically.
@@ -54,7 +54,7 @@ take an extra argument that specifies the length of the vector of
 random numbers to be returned.
 }
 \value{
-  Function \code{rng_alloc()} returns an external pointer to a GSL random
+  Function \code{rng_alloc()} returns an external pointer to a \acronym{GSL} random
   number generator.
 }
 \references{\url{http://www.gnu.org/software/gsl}}

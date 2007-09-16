@@ -25,10 +25,10 @@ complex_dilog(r, theta, give=FALSE, strict=TRUE)
     return just the answers, and \code{TRUE} meaning to return a status
     vector as well}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
-    if nonzero status is returned by the GSL function (\code{FALSE}
+    if nonzero status is returned by the \acronym{GSL} function (\code{FALSE}
     means to return the value: use with caution)}
 }
-\details{All functions as documented in the GSL reference manual section
+\details{All functions as documented in the \acronym{GSL} reference manual section
   7.11.}
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

@@ -65,7 +65,7 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
   \item{r.and.i}{In \code{gamma_complex()}, Boolean variable with
     default value of \code{TRUE} meaning to return a complex variable as
     per the details section below; and \code{FALSE} meaning to return
-    the values as advertised in the GSL manual}
+    the values as advertised in the \acronym{GSL} manual}
     \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
@@ -73,7 +73,7 @@ beta_inc(a,b,x,give=FALSE,strict=TRUE)
 }
 \details{
 
-  All functions as documented in the GSL reference manual section 7.19.
+  All functions as documented in the \acronym{GSL} reference manual section 7.19.
 
   Note that \code{gamma_inc_P()} gives the area of the left tail of the
   gamma distribution so, for example, \code{gamma_inc_P(1.8, 5) =

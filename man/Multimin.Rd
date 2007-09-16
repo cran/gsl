@@ -81,12 +81,12 @@ multimin.restart(state)
 }
 \value{All of these functions return a state variable, which consists
 of the following items:
-  \item{internal.state}{Bureaucratic stuff for communicating with GSL}
+  \item{internal.state}{Bureaucratic stuff for communicating with \acronym{GSL}}
   \item{x}{The current best guess of the optimal solution}
   \item{f}{The value of the function at the best guess}
   \item{df}{The derivative of the function at the best guess}
   \item{is.fdf}{TRUE if the algorithm is using a derivative}
-  \item{code}{The GSL return code from the last iteration}
+  \item{code}{The \acronym{GSL} return code from the last iteration}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \seealso{
@@ -98,7 +98,7 @@ of the following items:
   support using Yet Another Computer Algebra System.
 
   \code{numericDeriv} is the standard numerical differentation function
-  in R.  GSL can also do numerical differentiation, but no-one has
+  in R.  \acronym{GSL} can also do numerical differentiation, but no-one has
   written an R interface yet.
 
   \code{multimin} requires the objective function to have a single

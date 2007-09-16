@@ -13,7 +13,7 @@ gsl_poly(c_gsl,x)
 }
 \arguments{
   \item{c_gsl}{Coefficients of the poynomial (\code{c} in the function
-    definition and the gsl ref manual) starting at the constant term and
+    definition and the \acronym{GSL} ref manual) starting at the constant term and
     ending in the highest power; see details section.  This argument is
     called \dQuote{\code{c_gsl}} (and not \dQuote{\code{c}}) to avoid
     confusion with \R function \code{c()}}
@@ -23,7 +23,7 @@ gsl_poly(c_gsl,x)
   One must be careful to avoid off-by-one errors.  In C idiom, the
   function evaluates the polynomial
   \deqn{c[0]+c[1]x+c[2]x^2+\ldots+c[\mathrm{len}-1]x^{\mathrm{len}-1}}{c[0]+c[1]+...+c[len-1]x^(len-1)}
-  where len is the second argument of GSL function
+  where len is the second argument of \acronym{GSL} function
   \code{gsl_poly_eval()}.
 
   The \R idiom would be

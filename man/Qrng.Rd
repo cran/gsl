@@ -30,9 +30,9 @@ qrng_get(q, n = 1)
 }
 \details{
     These are wrappers for the quasi-random sequence
-functions from the GSL \url{http://www.gnu.org/software/gsl} with
+functions from the \acronym{GSL} \url{http://www.gnu.org/software/gsl} with
 arguments corresponding to those from the library, with a few exceptions.
-In particular:  I have used \code{dim} where the GSL uses just \code{d};
+In particular:  I have used \code{dim} where the \acronym{GSL} uses just \code{d};
 I have added the \code{n} argument to the \code{qrng_get} function, so that
 a single call can generate \code{n} vectors; I have not provided \R
 functions corresponding to \code{qrng_free} (because \R will automatically

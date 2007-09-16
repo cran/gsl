@@ -17,7 +17,7 @@ coupling_9j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh, two_
 }
 \arguments{
   \item{two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh,
-    two_ji, two_ma, two_mb, two_mc}{Arguments as per the  gsl manual}
+    two_ji, two_ma, two_mb, two_mc}{Arguments as per the \acronym{GSL} manual}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number}
   \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
