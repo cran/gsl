@@ -1,5 +1,6 @@
 \name{Ellint}
 \alias{Ellint}
+\alias{ellint}
 \alias{ellint_Kcomp}
 \alias{ellint_Ecomp}
 \alias{ellint_F}

@@ -1,5 +1,6 @@
 \name{Coulomb}
 \alias{Coulomb}
+\alias{coulomb}
 \alias{hydrogenicR_1}
 \alias{hydrogenicR}
 \alias{coulomb_wave_FG}

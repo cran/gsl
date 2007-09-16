@@ -31,6 +31,21 @@ void expint_E2_e(double *x, int *len, double *val, double *err, int *status)
   }
 }
 
+/*
+void expint_En_e(int *n, double *x, int *len, double *val, double *err, int *status)
+{
+  int i;
+  gsl_sf_result result;
+  gsl_set_error_handler_off();
+  
+  for(i = 0; i< *len ; i++){
+	  status[i] = gsl_sf_expint_En_e(n[i], x[i] , &result) ;
+    val[i] = result.val;
+    err[i] = result.err;
+  }
+}
+*/
+
 void expint_Ei_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;

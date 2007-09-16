@@ -1,5 +1,6 @@
 \name{Legendre}
 \alias{Legendre}
+\alias{legendre}
 \alias{legendre_P1}
 \alias{legendre_P2}
 \alias{legendre_P3}

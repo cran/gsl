@@ -1,5 +1,6 @@
 \name{Rng}
 \alias{Rng}
+\alias{rng}
 \alias{rng_alloc}
 \alias{rng_clone}
 \alias{rng_max}

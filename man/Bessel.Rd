@@ -1,5 +1,6 @@
 \name{Bessel}
 \alias{Bessel}
+\alias{bessel}
 \alias{bessel_J0}
 \alias{bessel_J1}
 \alias{bessel_Jn}

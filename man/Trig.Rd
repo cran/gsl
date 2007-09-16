@@ -1,5 +1,6 @@
 \name{Trig}
 \alias{Trig}
+\alias{trig}
 \alias{gsl_sf_sin}
 \alias{gsl_sf_cos}
 \alias{hypot}

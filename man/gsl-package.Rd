@@ -1,12 +1,13 @@
 \name{gsl-package}
 \alias{gsl-package}
 \alias{gsl}
+\alias{GSL}
 \docType{package}
 \title{
   Wrappers for the Gnu Scientific Library
 }
 \description{
-  An R wrapper for the special functions and quasi random number
+  An \R wrapper for the special functions and quasi random number
   generators of the Gnu Scientific Library
   (\url{http://www.gnu.org/software/gsl/})
 }
@@ -52,16 +53,15 @@ Maintainer:  <r.hankin@noc.soton.ac.uk>
 }
 \references{
   \itemize{
-    \item M. Abramowitz and I. A. Stegun 1965. \dQuote{Handbook of
+    \item M. Abramowitz and I. A. Stegun 1965. \emph{Handbook of
       mathematical functions}.  New York: Dover
-    \item M. Galassi et al. 2005. \dQuote{GNU Scientific Library}.
-    Reference Manual edition 1.9, for GSL version 1.9; 20 February 2007
-    \item R. K. S. Hankin 2006.  \dQuote{Introducing gsl, a wrapper for
-      the Gnu Scientific Library}.  Rnews 2006
+    \item M. Galassi et al. 2007. \emph{GNU Scientific Library}.
+    Reference Manual edition 1.10, for GSL version 1.10; 10 September 2007
+    \item R. K. S. Hankin 2006.  \emph{Introducing gsl, a wrapper for
+      the Gnu Scientific Library}.  Rnews 6(4):24-26
   }      
 }
 \keyword{ package }
-}
 \examples{
 airy_Ai(1:5)
 }

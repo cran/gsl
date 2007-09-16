@@ -1,6 +1,8 @@
 \name{Fermi-Dirac}
 \alias{Fermi_Dirac}
 \alias{Fermi}
+\alias{fermi_dirac}
+\alias{fermi}
 \alias{fermi_dirac_m1}
 \alias{fermi_dirac_0}
 \alias{fermi_dirac_1}

@@ -1,5 +1,6 @@
 \name{Coupling}
 \alias{Coupling}
+\alias{coupling}
 \alias{coupling_3j}
 \alias{coupling_6j}
 \alias{coupling_9j}

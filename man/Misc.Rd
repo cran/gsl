@@ -1,5 +1,6 @@
 \name{Misc}
 \alias{Misc}
+\alias{misc}
 \alias{process.args}
 \alias{strictify}
 \title{Argument processing and general info}

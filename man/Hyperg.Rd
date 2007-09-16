@@ -1,5 +1,6 @@
 \name{Hyperg}
 \alias{Hyperg}
+\alias{hyperg}
 \alias{hyperg_0F1}
 \alias{hyperg_1F1_int}
 \alias{hyperg_1F1}

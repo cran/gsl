@@ -1,5 +1,6 @@
 \name{Log}
 \alias{Log}
+\alias{log}
 \alias{gsl_sf_log}
 \alias{log_abs}
 \alias{complex_log}

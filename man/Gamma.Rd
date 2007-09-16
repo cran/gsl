@@ -1,5 +1,6 @@
 \name{Gamma}
 \alias{Gamma}
+\alias{gamma}
 \alias{gsl_sf_gamma}
 \alias{lngamma}
 \alias{lngamma_sgn}

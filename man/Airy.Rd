@@ -1,5 +1,6 @@
 \name{Airy}
 \alias{Airy}
+\alias{airy}
 \alias{airy_Ai}
 \alias{airy_Bi}
 \alias{airy_Bi_e}
@@ -26,7 +27,7 @@
 \title{Airy functions}
 \description{
   Airy functions as per the Gnu Scientific Library, reference manual
-  section 7.4 and AMS-55, section 10.4.  Thes functions are declared
+  section 7.4 and AMS-55, section 10.4.  These functions are declared
   in header file \code{gsl_sf_airy.h}
   }
 \usage{

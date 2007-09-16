@@ -1,4 +1,5 @@
 \name{multimin}
+\alias{Multimin}
 \alias{multimin}
 \alias{multimin.init}
 \alias{multimin.iterate}
