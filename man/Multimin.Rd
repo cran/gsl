@@ -107,6 +107,8 @@ of the following items:
 
 }
 \author{Andrew Clausen \email{clausen@econ.upenn.edu}}
+\note{The source code for the functions documented here conditionalizes
+  on \code{WIN32}; under windows there is a slight memory leak.}
 \examples{
 # The Rosenbrock function:
 x0 <- c(-1.2, 1)

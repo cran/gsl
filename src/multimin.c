@@ -93,7 +93,17 @@ void free_ptr(SEXP s)
 void free_fmin_ptr(SEXP s)
 {
 	gsl_multimin_fminimizer *gsl_state = R_ExternalPtrAddr(s);
+	
+/* following conditional suggested by Brian Ripley; under Windows, the
+    call to free caused the package to fail R CMD check.  Omitting the
+    free results in a slight memory leak; this is stated in
+    Multimin.Rd
+ */
+
+#ifndef WIN32
 	gsl_multimin_fminimizer_free(gsl_state);
+#endif
+	
 }
 
 SEXP multimin_f_new(SEXP state, SEXP x, SEXP method, SEXP step_size)
