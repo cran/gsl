@@ -38,7 +38,7 @@
   }
 }
 
-"sn" <- function(z,m){
+"sn_cn_dn" <- function(z,m,thing){  # complex case
   jj.r <- elljac(Re(z),m)
   s <- jj.r$sn
   c <- jj.r$cn
@@ -48,65 +48,36 @@
     s1 <- jj.i$sn
     c1 <- jj.i$cn
     d1 <- jj.i$dn
-    return(
-           (s*d1+1i*c*d*s1*c1)/(c1^2+m*s^2*s1^2)
-           )
+    out <- switch(thing,
+                  sn = (s*d1   +1i*c*d*s1*c1)/(c1^2+m*s^2*s1^2),
+                  cn = (c*c1   -1i*s*d*s1*d1)/(c1^2+m*s^2*s1^2),
+                  dn = (d*c1*d1-1i*m*s*c*s1 )/(c1^2+m*s^2*s1^2),
+                  stop('argument "thing" should be one of sn, cn, dn')
+                  )
   } else {
-    return(s)
+    out <- switch(thing,
+                  sn = s,
+                  cn = c,
+                  dn = d,
+                  stop('argument "thing" should be one of sn, cn, dn')
+                  )
   }
+  return(out)
 }
 
+gsl_sn <- function(z,m){sn_cn_dn(z,m,thing="sn")}
+gsl_cn <- function(z,m){sn_cn_dn(z,m,thing="cn")}
+gsl_dn <- function(z,m){sn_cn_dn(z,m,thing="dn")}
 
-"cn" <- function(z,m){
-  jj.r <- elljac(Re(z),m)
-  s <- jj.r$sn
-  c <- jj.r$cn
-  d <- jj.r$dn
-  if(is.complex(z)){
-    jj.i <- elljac(Im(z),1-m)
-    s1 <- jj.i$sn
-    c1 <- jj.i$cn
-    d1 <- jj.i$dn
-    
-    return(
-           (c*c1-1i*s*d*s1*d1)/(c1^2+m*s^2*s1^2)
-           )
-  } else {
-    return(c)
-  }
-}
+gsl_ns <- function(z,m){1/gsl_sn(z,m)}
+gsl_nc <- function(z,m){1/gsl_cn(z,m)}
+gsl_nd <- function(z,m){1/gsl_dn(z,m)}
 
-"dn" <- function(z,m){
-  jj.r <- elljac(Re(z),m)
-  s <- jj.r$sn
-  c <- jj.r$cn
-  d <- jj.r$dn
-  if(is.complex(z)){
-    jj.i <- elljac(Im(z),1-m)
-    s1 <- jj.i$sn
-    c1 <- jj.i$cn
-    d1 <- jj.i$dn
-    
-    return(
-           (d*c1*d1-1i*m*s*c*s1)/(c1^2+m*s^2*s1^2)
-           )
-  } else {
-    return(d)
-  }
-}
+gsl_sc <- function(z,m){gsl_sn(z,m)/gsl_cn(z,m)}
+gsl_sd <- function(z,m){gsl_sn(z,m)/gsl_dn(z,m)}
 
-ns <- function(z,m){1/sn(z,m)}
-nc <- function(z,m){1/cn(z,m)}
-nd <- function(z,m){1/dn(z,m)}
+gsl_cs <- function(z,m){gsl_cn(z,m)/gsl_sn(z,m)}
+gsl_cd <- function(z,m){gsl_cn(z,m)/gsl_dn(z,m)}
 
-sc <- function(z,m){sn(z,m)/cn(z,m)}
-sd <- function(z,m){sn(z,m)/dn(z,m)}
-
-cs <- function(z,m){cn(z,m)/sn(z,m)}
-cd <- function(z,m){cn(z,m)/dn(z,m)}
-
-ds <- function(z,m){dn(z,m)/sn(z,m)}
-dc <- function(z,m){dn(z,m)/cn(z,m)}
-
-
-  
+gsl_ds <- function(z,m){gsl_dn(z,m)/gsl_sn(z,m)}
+gsl_dc <- function(z,m){gsl_dn(z,m)/gsl_cn(z,m)}

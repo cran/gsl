@@ -1,18 +1,19 @@
 \name{Elljac}
 \alias{Elljac}
 \alias{elljac}
-\alias{sn}
-\alias{cn}
-\alias{dn}
-\alias{ns}
-\alias{nc}
-\alias{nd}
-\alias{sc}
-\alias{sd}
-\alias{cs}
-\alias{cd}
-\alias{ds}
-\alias{dc}
+\alias{sn_cn_dn}
+\alias{gsl_sn}
+\alias{gsl_cn}
+\alias{gsl_dn}
+\alias{gsl_ns}
+\alias{gsl_nc}
+\alias{gsl_nd}
+\alias{gsl_sc}
+\alias{gsl_sd}
+\alias{gsl_cs}
+\alias{gsl_cd}
+\alias{gsl_ds}
+\alias{gsl_dc}
 \title{Elliptic functions}
 \description{
   Elljac functions as per the Gnu Scientific Library, reference manual
@@ -21,18 +22,18 @@
 }
 \usage{
 elljac(u, m, give=FALSE, strict=TRUE)
-sn(z,m)
-cn(z,m)
-dn(z,m)
-ns(z,m)
-nc(z,m)
-nd(z,m)
-sc(z,m)
-sd(z,m)
-cs(z,m)
-cd(z,m)
-ds(z,m)
-dc(z,m)
+gsl_sn(z,m)
+gsl_cn(z,m)
+gsl_dn(z,m)
+gsl_ns(z,m)
+gsl_nc(z,m)
+gsl_nd(z,m)
+gsl_sc(z,m)
+gsl_sd(z,m)
+gsl_cs(z,m)
+gsl_cd(z,m)
+gsl_ds(z,m)
+gsl_dc(z,m)
 }
 \arguments{
   \item{u,m}{input: real values}
@@ -44,10 +45,12 @@ dc(z,m)
 }
 \details{
   A straightforward wrapper for the \code{gsl_sf_elljac_e}
-  function of the \acronym{GSL} library, except for \code{sn()}, \code{cn()}, and
-  \code{dn()}, which implement 16.21.1 to 16.21.4  (thus taking complex
-  arguments); and \code{ns()} et
+  function of the \acronym{GSL} library, except for \code{gsl_sn()}, \code{gsl_cn()}, and
+  \code{gsl_dn()}, which implement 16.21.1 to 16.21.4  (thus taking complex
+  arguments); and \code{gsl_ns()} et
   seq which are the minor elliptic functions.
+
+  Function \code{sn_cn_dn()} is not really intended for the end-user.
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
@@ -71,10 +74,9 @@ text(2.6*K,0.9,"dn u")
  a <- seq(from=-5,to=5,len=100)
 jj <- outer(a,a,function(a,b){a})
 z <- jj+1i*t(jj)
-e <- Re(cd(z,m=0.2))
+e <- Re(gsl_cd(z,m=0.2))
 e[abs(e)>10] <- NA
 contour(a,a,e,nlev=55)
-
 }
 
 \keyword{array}
