@@ -31,7 +31,7 @@ void expint_E2_e(double *x, int *len, double *val, double *err, int *status)
   }
 }
 
-/*
+
 void expint_En_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
   int i;
@@ -44,7 +44,6 @@ void expint_En_e(int *n, double *x, int *len, double *val, double *err, int *sta
     err[i] = result.err;
   }
 }
-*/
 
 void expint_Ei_e(double *x, int *len, double *val, double *err, int *status)
 {

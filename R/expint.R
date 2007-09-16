@@ -53,7 +53,7 @@
     return(val)
   }
 }
-if(FALSE){
+
 "expint_En" <- function(n, x, give=FALSE, strict=TRUE){
   jj <- process.args(n, x)
   n.vec <- jj$arg1
@@ -85,7 +85,6 @@ if(FALSE){
   } else {
     return(val)
   }
-}
 }
 
 "expint_Ei" <- function(x, give=FALSE, strict=TRUE){
