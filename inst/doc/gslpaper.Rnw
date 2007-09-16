@@ -18,7 +18,7 @@
 \Abstract{
   
   This vignette introduces the \pkg{gsl} package of \proglang{R} utilities
-  for accessing the functions of the GSL package.
+  for accessing the functions of the Gnu Scientific Library.
 
   An earlier version of this document was published
   as~\cite{hankin2006}.
@@ -30,7 +30,7 @@
 
 \Address{
   Robin K. S. Hankin\\
-  The University of Cambridge\\
+  University of Cambridge\\
   19 Silver Street\\
   Cambridge CB3 9EP\\
   United Kingdom\\
@@ -42,12 +42,13 @@
 \begin{document}
 
 \section{Introduction}
+
 The Gnu Scientific Library (GSL) is a collection of numerical routines
 for scientific computing~\citep{galassi2005}.  The routines are
-written in \proglang{C} and constitute a library for \proglang{C} programmers; the source
-code is distributed under the GNU General Public License.  One stated
-aim of the GSL development effort is the development of wrappers for
-high level languages.
+written in \proglang{C} and constitute a library for \proglang{C}
+programmers; the source code is distributed under the GNU General
+Public License.  One stated aim of the GSL development effort is the
+development of wrappers for high level languages.
 
 The \proglang{R} programming language~\citep{rcore2008} is an
 environment for statistical computation and graphics.  It consists of
@@ -86,16 +87,17 @@ context of an \proglang{R} package.  This structure makes it demonstrable that
 the GSL has been systematically and completely wrapped.
 
 Functions are named such that one can identify a function in the GSL
-manual, and the corresponding \proglang{R} command will be the same but with
-the prefix\footnote{Some functions, such as \code{gsl\_sf\_sin()},
-retain the prefix to avoid conflicts.  A full list is given in
-\code{Misc.Rd}.} and, if present, the ``\code{\_e}'' suffix, removed.
-In the case of the special functions, the prefix is
-``\code{gsl\_sf\_}''.  Thus, GSL function
+manual, and the corresponding \proglang{R} command will be the same
+but with the prefix\footnote{Some functions, such as
+  \code{gsl\_sf\_sin()}, retain the prefix to avoid conflicts.  A full
+  list is given in \code{Misc.Rd}.} and, if present, the
+``\code{\_e}'' suffix, removed.  In the case of the special functions,
+the prefix is ``\code{gsl\_sf\_}''.  Thus, GSL function
 \code{gsl\_sf\_airy\_Ai\_e()} of header file \code{gsl\_sf\_airy.h} is
-called, via intermediate \proglang{C} routine \code{airy\_Ai\_e()}, by \proglang{R}
-function \code{airy\_Ai()}.  Documentation is provided for every
-function defined in \code{gsl\_sf\_airy.h} under \code{Airy.Rd}.
+called, via intermediate \proglang{C} routine \code{airy\_Ai\_e()}, by
+\proglang{R} function \code{airy\_Ai()}.  Documentation is provided
+for every function defined in \code{gsl\_sf\_airy.h} under
+\code{Airy.Rd}.
 
 The \pkg{gsl} package is not intended to add any numerical
 functionality to the GSL, although here and there I have implemented
@@ -126,31 +128,57 @@ airy_Ai(1:3)
 
 The online helpfiles include many examples that reproduce graphs and
 tables that appear in \citeauthor{abramowitz1965}.  This constitutes a
-useful check on the routines.  For example, figure~\ref{airyfig} shows
-an approximate reproduction of their figure~10.6 (page~446).
+useful check on the routines.  For example, figures~\ref{airyfig_A}
+and~\ref{airyfig_B} show an approximate reproduction of their
+figures~10.6 and~10.7 (page~446).
+
+
 
 \begin{figure}[htbp]
   \begin{center}
 <<fig=TRUE>>=
 x <- seq(from=0,to=10,len=100)
-plot(c(0,11),c(-1,1),type="n",main="Fig 10.6, p446",xlab="",ylab="y",yaxt="n",xaxt="n",frame=FALSE)
-axis(1,pos=0)
+plot(c(0,11),c(-1,1),type="n",main="Fig 10.6, p446",xlab="",ylab="",yaxt="n",xaxt="n",frame=FALSE)
+axis(1,pos=0,at=c(0,2,4,6,8,10),labels=c("","2","4","6","8","10"))
 axis(2,pos=0)
 lines(x,airy_Ai       ( x),type="l",lty=1)
 lines(x,airy_Ai       (-x),type="l",lty=2)
 lines(x,airy_Ai_deriv ( x),type="l",lty=3)
 lines(x,airy_Ai_deriv (-x),type="l",lty=4)
-text(1,0.6,"Ai(-x)")
-text(0.85,0.33,"Ai(-x)")
-text(1.08,-0.26,"Ai'(x)")
-text(10.5,0.4,"Ai'(-x)")
+text(1,0.6     ,"Ai(-x)" )
+text(0.85,0.33 ,"Ai(x)"  )
+text(1.08,-0.26,"Ai'(x)" )
+text(10.5,0.4  ,"Ai'(-x)")
 arrows(10, 0, 11, 0,angle=11)
 text(11,-0.1,"x")
 @
-\caption{Functions~$\mathrm{Ai}(\pm x)$ \label{airyfig}
+\caption{Functions~$\mathrm{Ai}(\pm x)$ \label{airyfig_A}
   and~$\mathrm{Ai}'(\pm x)$ as plotted in the helpfile for
   \code{airy\_Ai()} and appearing on page~446
   of~\citet{abramowitz1965}}
+  \end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{center}
+<<fig=TRUE>>=
+x <- seq(from=0,to=10,len=100)
+plot(c(0,10),c(-1,2.2),type="n",main="Fig 10.7, p446",xlab="",ylab="",yaxt="n",xaxt="n",frame=FALSE)
+axis(1,pos=0,at=c(0,1:9),labels=c("","1","2","3","4","5","6","7","8","9"))
+axis(2,pos=0)
+lines(x,airy_Bi       ( x),type="l",lty=1)
+lines(x,airy_Bi       (-x),type="l",lty=2)
+lines(x,airy_Bi_deriv ( x),type="l",lty=3)
+lines(x,airy_Bi_deriv (-x),type="l",lty=4)
+text(0.15,1.44     ,"Bi(x)",pos=4)
+text(1,0.90 ,"Bi'(x)",pos=4)
+text(2.25,0.56,"Bi'(-x)")
+text(0.7,-0.55,"Bi'(-x)",pos=4)
+arrows(9, 0, 10, 0, angle=11)
+text(10,-0.1,"x")
+@
+\caption{Functions~$\mathrm{Bi}(\pm x)$ \label{airyfig_B}
+  and~$\mathrm{Bi}'(\pm x)$ \citep{abramowitz1965}}
   \end{center}
 \end{figure}
 

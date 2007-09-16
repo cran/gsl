@@ -21,9 +21,9 @@ strictify(val,status)
   massage the arguments into a form suitable for passing to \code{.C()}.
   For example, in function \code{hyperg_0F1(c,x)}, one wants each of 
   \code{hyperg_0F1(0.1, c(0.3,0.4))} and \code{hyperg_0F1(c(0.1,0.2),
-  0.3)} and \code{hyperg_0F1(c(0.1,0.2),c(0.3,0.4)} to behave sensibly.
+  0.3)} and \code{hyperg_0F1(c(0.1,0.2),c(0.3,0.4))} to behave sensibly.
 
-  Function \code{process.arg()} is used widely in the package, taking an
+  Function \code{process.args()} is used widely in the package, taking an
   arbitrary number of arguments and returning a list whose elements are
   vectors of the same length.  Most of the special functions use
   \code{process.args()} to ensure that the returned value takes the
@@ -41,6 +41,29 @@ strictify(val,status)
   default value of \code{FALSE}, only a numerical value is returned.
   If \code{TRUE}, error information and the status (see preceding
   paragraph) is also returned.
+
+
+  Following tips found on R-devel:
+
+  \enumerate{
+    \item Download and extract source code of R-package \pkg{gsl}
+    \item Use \code{gsl-config --libs} to get the path to \acronym{GSL}'s
+    lib directory  
+    (\code{-L<path-to-lib>}), use \code{gsl-config --cflags}  to get the
+    path to \code{GSL}'s include directory (\code{-I<path-to-include>})
+    \item Change \code{Makevars} in \code{gsl/src}:
+    \itemize{
+      \item Add \code{-L<path-to-lib>} to \code{PKG_LIBS}
+      \item Add (new) line: \code{PKG_CPPFLAGS=-I<path-to-include>}
+    }
+    \item Install \code{gsl} via
+    
+    \code{LDFLAGS=-L<path-to-lib>; export LDFLAGS}
+
+    \code{CPPFLAGS=-I<path-to-include>;export CPPFLAGS}
+
+    \code{R CMD INSTALL gsl}
+}
 }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}

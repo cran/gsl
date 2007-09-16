@@ -4,6 +4,7 @@
 \alias{multimin.init}
 \alias{multimin.iterate}
 \alias{multimin.restart}
+\alias{multimin.fminimizer.size}
 \title{Function minimization} 
 \description{
   Function minimization using the Gnu Scientific Library, reference
@@ -21,6 +22,7 @@ multimin(..., prec=0.0001)
 multimin.init(x, f, df=NA, fdf=NA, method=NA, step.size=NA, tol=NA)
 multimin.iterate(state)
 multimin.restart(state)
+multimin.fminimizer.size(state)
 }
 \arguments{
   \item{...}{In function \code{multimin()}, the argument list passed to

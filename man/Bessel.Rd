@@ -135,6 +135,11 @@ bessel_zero_Jnu(nu, s, give=FALSE, strict=TRUE)
 \author{Robin K. S. Hankin}
 \references{\url{http://www.gnu.org/software/gsl}}
 \examples{
+
+# Compare native R routine with GSL:
+besselK(0.55,4) - bessel_Knu(4,0.55)  # should be small
+
+
 x <- seq(from=0,to=15,len=1000)
 plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
 jj.Y0 <- bessel_Y0(x)
@@ -158,9 +163,6 @@ text(4.2, 0.43, expression(Y[1]))
 text(7.2, 0.33, expression(J[0]))
 text(8.6, 0.3, expression(J[0],paste("    ,")))
 text(9.1, 0.3, expression(Y[0]))
-
-
-
 
 x <- seq(from=0,to=13,len=100)
 y <- t(bessel_jl_array(3,x))

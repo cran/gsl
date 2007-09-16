@@ -1,18 +1,27 @@
 # An R wrapper for GSL's multimin family of functions for minimizing functions.
 #
 # Written in 2007 by Andrew Clausen <clausen@econ.upenn.edu>
+# - Added Nelder-Mead convergence interface in 2010.
 
-# dyn.load("gsl.so")
+#dyn.load("gsl.so")
 
 multimin <- function(..., prec=0.0001)
 {
+	is.converged <- function(state, old.x)
+	{
+		if (state$method == "nm")
+			return(multimin.fminimizer.size(state) < prec)
+
+		convergence <- ifelse(state$is.fdf, state$df, old.x - state$x)
+		return (sum(abs(convergence)) < prec)
+	}
+
 	state <- multimin.init(...)
 	old.x <- state$x
 	while (TRUE)
 	{
 		state <- multimin.iterate(state)
-		convergence <- ifelse(state$is.fdf, state$df, old.x - state$x)
-		if (sum(abs(convergence)) < prec)
+		if (is.converged(state, old.x))
 			break
 		old.x <- state$x
 	}
@@ -28,7 +37,7 @@ multimin.init <- function(x, f, df=NA, fdf=NA, method=NA, step.size=NA, tol=NA)
                "conjugate-pr",     # polak-ribiere
                "bfgs",             # broyden-fletcher-goldfarb-shanno
                "steepest-descent", 
-               "nm"                # nelder-meade
+               "nm"                # nelder-mead
                )
 
         multimin.method.f <- c(FALSE, FALSE, FALSE, FALSE, TRUE)
@@ -118,7 +127,7 @@ multimin.init <- function(x, f, df=NA, fdf=NA, method=NA, step.size=NA, tol=NA)
 	}
 
 	list(internal.state = internal.state, x=x, f=NA, df=rep(NA, n),
-	     is.fdf=is.fdf)
+	     is.fdf=is.fdf, method=multimin.method.names[[method]])
 }
 
 multimin.iterate <- function(state)
@@ -142,5 +151,12 @@ multimin.restart <- function(state)
 	if (state$is.fdf)
 		.Call("multimin_restart", state$internal.state)
 	state
+}
+
+# Convergence criterion for Nelder-Mead
+multimin.fminimizer.size <- function(state)
+{
+	stopifnot(!state$is.fdf)
+	.Call("multimin_fminimizer_size", state$internal.state)
 }
 

@@ -57,7 +57,9 @@ airy_zero_Bi_deriv(n, give=FALSE, strict=TRUE)
 }
 \details{
   The zero functions return a status of \code{GSL_EDOM} and a value of
-  \code{NA} for \eqn{n\leq 0}{n <= 0}
+  \code{NA} for \eqn{n\leq 0}{n <= 0}.
+
+  An example is given in the package vignette.
   }
 \references{\url{http://www.gnu.org/software/gsl}}
 \author{Robin K. S. Hankin}
@@ -73,20 +75,6 @@ Bi=airy_Ai(x),Bidash=airy_Bi_deriv(x))
 f(x)  #table 10.11, p475
 f(-x) #table 10.11, p476
 
-x <- seq(from=0,to=10,len=100)
-plot(c(0,10),c(-1,1),type="n",main="Fig 10.6, p446",xlab="x",ylab="y")
-lines(x,airy_Ai       ( x),type="l",lty=1)
-lines(x,airy_Ai       (-x),type="l",lty=2)
-lines(x,airy_Ai_deriv ( x),type="l",lty=3)
-lines(x,airy_Ai_deriv (-x),type="l",lty=4)
-abline(0,0)
-
-
-airy_zero_Ai(-3:3)
-airy_zero_Bi(-3:3)
-airy_zero_Ai_deriv(-3:3)
-airy_zero_Bi_deriv(-3:3)
-
 
 x <- 1:10  #table 10.13, p478
 cbind(x,
@@ -97,6 +85,13 @@ cbind(x,
  airy_zero_Bi_deriv(x), airy_Bi(airy_zero_Bi_deriv(x))
  )
 
-}
 
-\keyword{array}
+# Verify 10.4.4 and 10.4.5, p446:
+3^(-2/3)/gamma(2/3)   - airy_Ai(0)
+3^(-1/3) / gamma(1/3) + airy_Ai_deriv(0) 
+3^(-1/6) / gamma(2/3) - airy_Bi(0)
+3^(1/6) / gamma(1/3)  - airy_Bi_deriv(0)
+#  All should be small
+
+
+}
