@@ -22,7 +22,7 @@ License: \tab gsl\cr
 
   The function naming scheme directly copies the \acronym{GSL} manual except that
   leading \code{gsl_sf_} and, if present, the trailing \code{_e} is
-  stripped: thus \code{gsl_sf_Airy_Ai_e} goes to \R\ function
+  stripped: thus \code{gsl_sf_Airy_Ai_e} goes to \R function
   \code{airy_Ai()}; however, some functions retain the prefix to avoid
   conflicts (viz \code{gsl_sf_sin()}, \code{gsl_sf_cos()},
   \code{gsl_sf_gamma()}, \code{gsl_sf_ choose()}, \code{gsl_sf_beta()}).

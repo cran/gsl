@@ -30,10 +30,11 @@
 
 \Address{
   Robin K. S. Hankin\\
-  University of Cambridge\\
-  19 Silver Street\\
-  Cambridge CB3 9EP\\
-  United Kingdom\\
+  Auckland University of Technology\\
+  AUT Tower\\
+  Wakefield Street\\
+  Auckland\\
+  New Zealand\\
   E-mail: \email{hankin.robin@gmail.com}
 }
 
