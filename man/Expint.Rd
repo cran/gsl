@@ -49,7 +49,9 @@ x <- seq(from=0.5, to=1, by=0.01)
 cbind(x,Si(x),Ci(x),expint_Ei(x),expint_E1(x))  #table 5.1 of AS, p239
 
 x <- seq(from=0, to=12, len=100)
-plot(x,Ci(x),col="black",type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 5.6, p232",xlim=c(0,12),ylim=c(-1,2.0))
+plot(x,Ci(x),col="black",type="l",xaxt="n",yaxt="n",bty="n",
+         xlab="",ylab="",main="Figure 5.6, p232",
+         xlim=c(0,12),ylim=c(-1,2.0))
 lines(x,Si(x))
 axis(1,pos=0)
 axis(2,pos=0)

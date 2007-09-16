@@ -141,7 +141,9 @@ besselK(0.55,4) - bessel_Knu(4,0.55)  # should be small
 
 
 x <- seq(from=0,to=15,len=1000)
-plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 9.1, p359")
+plot(x,bessel_J0(x),xlim=c(0,16),ylim=c(-0.8,1.1),type="l",
+           xaxt="n",yaxt="n",bty="n",xlab="",ylab="",
+           main="Figure 9.1, p359")
 jj.Y0 <- bessel_Y0(x)
 jj.Y0[jj.Y0< -0.8] <- NA
 lines(x,jj.Y0)
@@ -167,11 +169,14 @@ text(9.1, 0.3, expression(Y[0]))
 x <- seq(from=0,to=13,len=100)
 y <- t(bessel_jl_array(3,x))
 y[y>0.6] <- NA
- matplot(x,y,col="black",type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",xlim=c(0,16),ylim=c(-0.3,0.75),main="Figure 10.1, p438")
+ matplot(x,y,col="black",type="l",xaxt="n",yaxt="n",bty="n",
+         xlab="",ylab="",xlim=c(0,16),ylim=c(-0.3,0.75),
+         main="Figure 10.1, p438")
 axis(1,pos=0,at=2*(1:7))
 arrows(0,0,15,0,length=0.1,angle=10)
 arrows(0,0,0,0.65,length=0.1,angle=10)
-axis(2,pos=0,las=1,at=seq(from=-3,to=6)/10,labels=c("-.3","-.2","-.1","0",".1",".2",".3",".4",".5",".6"))
+axis(2,pos=0,las=1,at=seq(from=-3,to=6)/10,
+         labels=c("-.3","-.2","-.1","0",".1",".2",".3",".4",".5",".6"))
 text(0, 0.7, expression(J[n](x)))
 text(15.5, 0, expression(x))
 text(2.2,0.58,expression(n==0))

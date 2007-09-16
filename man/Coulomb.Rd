@@ -41,9 +41,11 @@ coulomb_CL_array(L_min, kmax, eta, give=FALSE,strict=TRUE)
 
 x <- seq(from=0,to=14,len=300)
 jj <- coulomb_wave_FG(1,10,x,0)
-plot(x,jj$val_F,type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 14.1, p539")
+plot(x,jj$val_F,type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",
+       main="Figure 14.1, p539")
 lines(x,jj$val_G,type="l",lty=2)
-axis(1,pos=0,at=1:14,labels=c("","2","","4","","6","","8","","10","","12","","14"))
+axis(1,pos=0,at=1:14,
+       labels=c("","2","","4","","6","","8","","10","","12","","14"))
 lines(c(0,1),c(0,0))
 axis(2,pos=0)
 text(9.5, 0.63, expression(F[L]))
@@ -61,9 +63,13 @@ lines(x,coulomb_wave_FG(eta= 0,x,L_F=0,k=0)$val_F,type="l",lty=1)
 lines(x,coulomb_wave_FG(eta= 5,x,L_F=0,k=0)$val_F,type="l",lty=6)
 lines(x,coulomb_wave_FG(eta=10,x,L_F=0,k=0)$val_F,type="l",lty=6)
 lines(x,coulomb_wave_FG(eta=x/2,x,L_F=0,k=0)$val_F,type="l",lty="F3")
-axis(1,pos=0,at=1:24, labels=c("","2","","4","","","","8","","10","","12","","14","","","","18","","","","22","","24"))
+axis(1,pos=0,at=1:24,
+       labels=c("","2","","4","","","","8","","10","","12",
+                "","14","","","","18","","","","22","","24"))
 lines(c(0,26),c(0,0))
-axis(2,pos=0,at=0.2*(-6:9),labels=c("","-1.2","","-.8","","-.4","","0","",".4","",".8","","1.2","","1.6"))
+axis(2,pos=0,at=0.2*(-6:9),
+       labels=c("","-1.2","","-.8","","-.4","","0","",".4",
+                "",".8","","1.2","","1.6"))
 text(2.5, -0.8, expression(eta == 0))
 text(4.5,1.1,adj=0, expression(eta == 1))
 text(14,1.4,adj=0, expression(eta == 5))

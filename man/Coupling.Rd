@@ -13,7 +13,8 @@
 \usage{
 coupling_3j(two_ja, two_jb, two_jc, two_ma, two_mb, two_mc, give=FALSE, strict=TRUE)
 coupling_6j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, give=FALSE, strict=TRUE)
-coupling_9j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh, two_ji, give=FALSE, strict=TRUE)
+coupling_9j(two_ja, two_jb, two_jc, two_jd, two_je, two_jf,
+      two_jg, two_jh, two_ji, give=FALSE, strict=TRUE)
 }
 \arguments{
   \item{two_ja, two_jb, two_jc, two_jd, two_je, two_jf, two_jg, two_jh,

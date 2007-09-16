@@ -32,8 +32,9 @@ gegenpoly_array(nmax,lambda, x, give=FALSE,strict=TRUE)
 
 x <- seq(from=-1 ,to=1,len=300)
 y <- gegenpoly_array(6,0.5,x)
- matplot(x,t(y[-(1:2),]),
-xlim=c(-1,1.2),ylim=c(-0.5,1.5),type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",main="Figure 22.5, p777",col="black")
+matplot(x,t(y[-(1:2),]), xlim=c(-1,1.2),ylim=c(-0.5,1.5),
+       type="l",xaxt="n",yaxt="n",bty="n",xlab="",ylab="",
+       main="Figure 22.5, p777",col="black")
 axis(1,pos=0)
 axis(2,pos=0)
 
