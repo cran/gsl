@@ -1,4 +1,4 @@
-d24f45091dfddaa57105143191f51d6f *DESCRIPTION
+dd553f487b1b9f5143519c31e0541f28 *DESCRIPTION
 43cfffb315b399d106c9e7954f22d91a *INSTALL
 31483d04500c9ce2a7050ab516eec317 *NAMESPACE
 49451ef3da39ad3348db4efb9897229d *R/aaa.R
@@ -35,8 +35,8 @@ f2606a5708629a1b4ebc401b857ba00d *R/psi.R
 db9a953c82fb5bcad9aee1bc7c6c053a *R/zzz.R
 c49ad1d44c0b69af5e210633fcaddcf6 *build/vignette.rds
 67c9db5dc1a8e12ccf5880ffe206ce56 *cleanup
-98d0b4377dad6dcd1014786f247027b5 *configure
-afdb66942750b3ac5417d2484e59bbfe *configure.ac
+9a9891f695e4676eb2f69fb50f393f57 *configure
+b0a09ce66804c989dc28f289db46011c *configure.ac
 4f92f503d9c4f423a6e89a9eaf63b63a *inst/CITATION
 e2b59fe3fff2bcb30599893a7e590f33 *inst/doc/gslpaper.R
 3301d42c84eae58199688edf0b89e67b *inst/doc/gslpaper.Rnw
@@ -83,7 +83,7 @@ f58e8ead369ee94387edc38f1330ada1 *src/coulomb.c
 b9e67aa3572a60fc8cfe5651d386a251 *src/dawson.c
 07b6bc201b1956c4a5dd90172fdb6cb2 *src/debye.c
 5b5cabf6031c19224e7e7ef4ac9e2b6a *src/dilog.c
-e8e7cb31ab73cc4f04402445d607965a *src/ellint.c
+ca96b38cdc06b5c35fee02b26b2bff4d *src/ellint.c
 bb037c708bd7e7ba735b83b8f5166e0a *src/elljac.c
 803c371059fc2b48262c6a611f10e48e *src/error.c
 23e873053f5e1544a259ef8444d268f8 *src/expint.c
@@ -93,7 +93,7 @@ f183cb92f62f2132ebcd6c6e87dadbe9 *src/fermi_dirac.c
 42f6f901e8451ca0b1aa6c24b292a3b8 *src/hyperg.c
 dfa461e5ad77313a206f82f677ee3cac *src/laguerre.c
 5c539738e044a51c33f3916873543392 *src/lambert.c
-1fe19b728d6a3eb673d94d95ce5e0347 *src/legendre.c
+4c21539636e69450c7ab4da6684dc7c9 *src/legendre.c
 a60c1c9bc368e9c50a8545aab6ca67bc *src/log.c
 8768413013d9891c716a3fe0f60826bd *src/multimin.c
 d108215b94072249889c251a8e9e6f37 *src/poly.c

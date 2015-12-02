@@ -1,3 +1,5 @@
+#include <stdlib.h> // for size_t
+#include <gsl/gsl_version.h>
 #include <gsl/gsl_sf_legendre.h>
 #include <gsl/gsl_errno.h>
 
@@ -182,6 +184,7 @@ void legendre_Plm_e(int *l, int *m, double *x, int *len, double *val, double *er
 	}
 }  
 
+#if ((GSL_MAJOR_VERSION < 2) || (GSL_MAJOR_VERSION == 2 && GSL_MINOR_VERSION == 0))
 void legendre_Plm_array(int *lmax, int *m, double* x, int* len, double* out, int* status)
 {
 	int i;
@@ -191,6 +194,7 @@ void legendre_Plm_array(int *lmax, int *m, double* x, int* len, double* out, int
 		status[i] = gsl_sf_legendre_Plm_array(*lmax, *m, x[i], out+i*(*lmax- *m +1));
 	}
 }
+#endif
 
 void legendre_sphPlm(int *l, int *m, double *x, int *len, double *out)
 {
@@ -214,6 +218,7 @@ void legendre_sphPlm_e(int *l, int *m, double *x, int *len, double *val, double 
 	}
 }  
 
+#if ((GSL_MAJOR_VERSION < 2) || (GSL_MAJOR_VERSION == 2 && GSL_MINOR_VERSION == 0))
 void legendre_sphPlm_array(int *lmax, int *m, double* x, int* len, double* out, int* status)
 {
 	int i;
@@ -223,6 +228,7 @@ void legendre_sphPlm_array(int *lmax, int *m, double* x, int* len, double* out, 
 		status[i] = gsl_sf_legendre_Plm_array(*lmax, *m, x[i], out+i*(*lmax- *m +1));
 	}
 }
+#endif
 
 void conicalP_half_e(double *lambda, double *x, int *len, double *val, double *err, int *status)
 {

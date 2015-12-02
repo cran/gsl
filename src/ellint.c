@@ -1,3 +1,4 @@
+#include <gsl/gsl_version.h>
 #include <gsl/gsl_sf_ellint.h>
 #include <gsl/gsl_errno.h>
 
@@ -79,7 +80,11 @@ void ellint_D_e(double *phi, double *k, double *n, int *nk, int *mode, double *v
   gsl_set_error_handler_off();
   
   for(i = 0; i< *nk ; i++){
+#if defined(GSL_MAJOR_VERSION) && GSL_MAJOR_VERSION >= 2
+    status[i] = gsl_sf_ellint_D_e(phi[i], k[i], sf_mode[*mode], &result) ;
+#else
     status[i] = gsl_sf_ellint_D_e(phi[i], k[i], n[i], sf_mode[*mode], &result) ;
+#endif
     val[i] = result.val;
     err[i] = result.err;
   }
