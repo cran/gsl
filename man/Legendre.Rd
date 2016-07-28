@@ -9,10 +9,16 @@
 \alias{legendre_Q0}
 \alias{legendre_Q1}
 \alias{legendre_Ql}
+\alias{legendre_array_n}
+\alias{legendre_array_index}
+\alias{legendre_check_args}
+\alias{legendre_array}
+\alias{legendre_deriv_array}
+\alias{legendre_deriv_alt_array}
+\alias{legendre_deriv2_array}
+\alias{legendre_deriv2_alt_array}
 \alias{legendre_Plm}
-\alias{legendre_Plm_array}
 \alias{legendre_sphPlm}
-\alias{legendre_sphPlm_array}
 \alias{conicalP_half}
 \alias{conicalP_mhalf}
 \alias{conicalP_0}
@@ -40,10 +46,16 @@ legendre_Pl_array(lmax, x, give=FALSE, strict=TRUE)
 legendre_Q0(x, give=FALSE, strict=TRUE)
 legendre_Q1(x, give=FALSE, strict=TRUE)
 legendre_Ql(l, x, give=FALSE, strict=TRUE)
+legendre_array_n(lmax)
+legendre_array_index(l,m)
+legendre_check_args(x,lmax,norm,csphase)
+legendre_array(x, lmax, norm=1, csphase= -1)
+legendre_deriv_array(x, lmax, norm=1, csphase= -1)
+legendre_deriv_alt_array(x, lmax, norm=1, csphase= -1)
+legendre_deriv2_array(x, lmax, norm=1, csphase= -1)
+legendre_deriv2_alt_array(x, lmax, norm=1, csphase= -1)
 legendre_Plm(l, m, x, give=FALSE, strict=TRUE)
-legendre_Plm_array(lmax, m, x, give=FALSE, strict=TRUE)
 legendre_sphPlm(l, m, x, give=FALSE, strict=TRUE)
-legendre_sphPlm_array(lmax, m, x, give=FALSE, strict=TRUE)
 conicalP_half(lambda, x, give=FALSE, strict=TRUE)  
 conicalP_mhalf(lambda, x, give=FALSE, strict=TRUE)  
 conicalP_0(lambda, x, give=FALSE, strict=TRUE)  
@@ -58,6 +70,7 @@ legendre_H3d_array(lmax, lambda, eta, give=FALSE, strict=TRUE)
 \arguments{
   \item{eta,lambda,x}{input: real values}
   \item{l,m,lmax}{input: integer values}
+  \item{csphase,norm}{Options for use with \code{legendre_array()}}
   \item{give}{Boolean, with default \code{FALSE} meaning to
     return just the answers, and \code{TRUE} meaning to return a status
     vector as well}
@@ -94,6 +107,20 @@ t(legendre_Pl_array(10, seq(from=0,to=1,by=0.01))[1+c(2,3,9,10),])
 #table 8.3:
 f <- function(n){legendre_Ql(n, seq(from=0,to=1,by=0.01))}
 sapply(c(0,1,2,3,9,10),f)
+
+
+# Some checks for the legendre_array() series:
+
+# P_6^1(0.3):
+legendre_array(0.3,7)[7,2]         # MMA:  LegendreP[6,1,0.3]; note off-by-one issue
+
+# d/dx  P_8^5(x) @ x=0.2:
+legendre_deriv_array(0.2,8)[9,6]   # MMA: D[LegendreP[8,5,x],x] /. {x -> 0.2}
+
+
+# alternative derivatives:
+ legendre_deriv_alt_array(0.4,8)[9,6]  # D[LegendreP[8,5,Cos[x]],x] /. x -> ArcCos[0.4] 
+
 
 
 }

@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_zeta_int_e  goes to zeta. */
 
 
-void zeta_int(int *n, int *len, double *val, double *err, int *status)
+void zeta_int(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void zeta_int(int *n, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void zeta(double *s, int *len, double *val, double *err, int *status)
+void zeta(double *s, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void zeta(double *s, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void zetam1_int(int *n, int *len, double *val, double *err, int *status)
+void zetam1_int(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void zetam1_int(int *n, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void zetam1(double *s, int *len, double *val, double *err, int *status)
+void zetam1(const double *s, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -57,7 +57,7 @@ void zetam1(double *s, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void hzeta(double *s, double *q, int *len, double *val, double *err, int *status)
+void hzeta(const double *s, const double *q, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -70,7 +70,7 @@ void hzeta(double *s, double *q, int *len, double *val, double *err, int *status
 	}
 }  
 
-void eta_int(int *n, int *len, double *val, double *err, int *status)
+void eta_int(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -83,7 +83,7 @@ void eta_int(int *n, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void eta(double *s, int *len, double *val, double *err, int *status)
+void eta(const double *s, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

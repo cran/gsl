@@ -6,7 +6,7 @@
    debye_1. */
 
 
-void coupling_3j(int *two_ja, int *two_jb, int *two_jc, int *two_ma, int *two_mb, int *two_mc, int *len, double *val, double *err, int *status)
+void coupling_3j(const int *two_ja, const int *two_jb, const int *two_jc, const int *two_ma, const int *two_mb, const int *two_mc, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -19,7 +19,7 @@ void coupling_3j(int *two_ja, int *two_jb, int *two_jc, int *two_ma, int *two_mb
 	}
 }  
 
-void coupling_6j(int *two_ja, int *two_jb, int *two_jc, int *two_jd, int *two_je, int *two_jf, int *len, double *val, double *err, int *status)
+void coupling_6j(const int *two_ja, const int *two_jb, const int *two_jc, const int *two_jd, const int *two_je, const int *two_jf, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -32,7 +32,7 @@ void coupling_6j(int *two_ja, int *two_jb, int *two_jc, int *two_jd, int *two_je
 	}
 }  
 
-void coupling_9j(int *two_ja, int *two_jb, int *two_jc, int *two_jd, int *two_je, int *two_jf, int *two_jg, int *two_jh, int *two_ji, int *len, double *val, double *err, int *status)
+void coupling_9j(const int *two_ja, const int *two_jb, const int *two_jc, const int *two_jd, const int *two_je, const int *two_jf, const int *two_jg, const int *two_jh, const int *two_ji, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
