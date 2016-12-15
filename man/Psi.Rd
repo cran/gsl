@@ -25,7 +25,7 @@ psi_n(m, x, give=FALSE, strict=TRUE)
   \item{x,y}{input: real values}
   \item{give}{Boolean with \code{TRUE} meaning to return a list of three
     items: the value, an estimate of the error, and a status number}
-  \item{strict}{Boolean, with default \code{TRUE} meaning to return \code{NaN}
+  \item{strict}{Boolean, with \code{TRUE} meaning to return \code{NaN}
     if status is an error}
 }
 \references{\url{http://www.gnu.org/software/gsl}}

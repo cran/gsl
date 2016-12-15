@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_expint_W0 goes to expint_W0. */
 
 
-void expint_E1_e(const double *x, const int *len, double *val, double *err, int *status)
+void expint_E1_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -18,7 +18,7 @@ void expint_E1_e(const double *x, const int *len, double *val, double *err, int 
   }
 }  
 
-void expint_E2_e(const double *x, const int *len, double *val, double *err, int *status)
+void expint_E2_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -32,7 +32,7 @@ void expint_E2_e(const double *x, const int *len, double *val, double *err, int 
 }
 
 
-void expint_En_e(const int *n, const double *x, const int *len, double *val, double *err, int *status)
+void expint_En_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -45,7 +45,7 @@ void expint_En_e(const int *n, const double *x, const int *len, double *val, dou
   }
 }
 
-void expint_Ei_e(const double *x, const int *len, double *val, double *err, int *status)
+void expint_Ei_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -58,7 +58,7 @@ void expint_Ei_e(const double *x, const int *len, double *val, double *err, int 
   }
 }
 
-void Shi_e(const double *x, const int *len, double *val, double *err, int *status)
+void Shi_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -73,7 +73,7 @@ void Shi_e(const double *x, const int *len, double *val, double *err, int *statu
 
 
 
-void Chi_e(const double *x, const int *len, double *val, double *err, int *status)
+void Chi_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -88,7 +88,7 @@ void Chi_e(const double *x, const int *len, double *val, double *err, int *statu
 
 
 
-void expint_3_e(const double *x, const int *len, double *val, double *err, int *status)
+void expint_3_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -101,7 +101,12 @@ void expint_3_e(const double *x, const int *len, double *val, double *err, int *
   }
 }
 
-void Si_e(const double *x, const int *len, double *val, double *err, int *status)
+
+
+
+
+
+void Si_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -114,7 +119,8 @@ void Si_e(const double *x, const int *len, double *val, double *err, int *status
   }
 }
 
-void Ci_e(const double *x, const int *len, double *val, double *err, int *status)
+
+void Ci_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;
@@ -127,7 +133,7 @@ void Ci_e(const double *x, const int *len, double *val, double *err, int *status
   }
 }
 
-void atanint_e(const double *x, const int *len, double *val, double *err, int *status)
+void atanint_e(double *x, int *len, double *val, double *err, int *status)
 {
   int i;
   gsl_sf_result result;

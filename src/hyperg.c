@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_dawson  goes to dawson. */
 
 
-void hyperg_0F1_e(const double *c, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_0F1_e(double *c, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void hyperg_0F1_e(const double *c, const double *x, const int *len, double *val,
 	}
 }  
 
-void hyperg_1F1_int_e(const int *m, const int *n, double *x, const int *len, double *val, double *err, int *status)
+void hyperg_1F1_int_e(int *m, int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void hyperg_1F1_int_e(const int *m, const int *n, double *x, const int *len, dou
 	}
 }  
 
-void hyperg_1F1_e(const double *a, const double *b, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_1F1_e(double *a, double *b, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void hyperg_1F1_e(const double *a, const double *b, const double *x, const int *
 	}
 }  
 
-void hyperg_U_int_e(const int *m, const int *n, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_U_int_e(int *m, int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -57,7 +57,7 @@ void hyperg_U_int_e(const int *m, const int *n, const double *x, const int *len,
 	}
 }  
 
-void hyperg_U_e(const double *a, const double *b, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_U_e(double *a, double *b, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -70,7 +70,7 @@ void hyperg_U_e(const double *a, const double *b, const double *x, const int *le
 	}
 }  
 
-void hyperg_2F1_e(const double *a, const double *b, const double *c, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_2F1_e(double *a, double *b, double *c, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -83,7 +83,7 @@ void hyperg_2F1_e(const double *a, const double *b, const double *c, const doubl
 	}
 }
   
-void hyperg_2F1_conj_e(const double *aR, const double *aI, const double *c, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_2F1_conj_e(double *aR, double *aI, double *c, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -96,7 +96,7 @@ void hyperg_2F1_conj_e(const double *aR, const double *aI, const double *c, cons
 	}
 }  
 
-void hyperg_2F1_renorm_e(const double *a, const double *b, const double *c, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_2F1_renorm_e(double *a, double *b, double *c, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -109,7 +109,7 @@ void hyperg_2F1_renorm_e(const double *a, const double *b, const double *c, cons
 	}
 }
 
-void hyperg_2F1_conj_renorm_e(const double *aR, const double *aI, const double *c, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_2F1_conj_renorm_e(double *aR, double *aI, double *c, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -122,7 +122,7 @@ void hyperg_2F1_conj_renorm_e(const double *aR, const double *aI, const double *
 	}
 }  
 
-void hyperg_2F0_e(const double *a, const double *b, const double *x, const int *len, double *val, double *err, int *status)
+void hyperg_2F0_e(double *a, double *b, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

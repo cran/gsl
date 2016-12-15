@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_sin_e  goes to sin_e. */
 
 
-void sin_e(const double *x, const int *len, double *val, double *err, int *status)
+void sin_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void sin_e(const double *x, const int *len, double *val, double *err, int *statu
 	}
 }  
 
-void cos_e(const double *x, const int *len, double *val, double *err, int *status)
+void cos_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void cos_e(const double *x, const int *len, double *val, double *err, int *statu
 	}
 }  
 
-void hypot_e(const double *x, double *y, const int *len, double *val, double *err, int *status)
+void hypot_e(double *x, double *y, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void hypot_e(const double *x, double *y, const int *len, double *val, double *er
 	}
 }  
 
-void sinc_e(const double *x, const int *len, double *val, double *err, int *status)
+void sinc_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -57,7 +57,7 @@ void sinc_e(const double *x, const int *len, double *val, double *err, int *stat
 	}
 }
 
-void complex_sin_e(double *zr, double *zi, const int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
+void complex_sin_e(double *zr, double *zi, int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
 {
 	int i;
 	gsl_sf_result lnr;
@@ -76,7 +76,7 @@ void complex_sin_e(double *zr, double *zi, const int *len, double *val_lnr, doub
 }
 
 
-void complex_cos_e(double *zr, double *zi, const int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
+void complex_cos_e(double *zr, double *zi, int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
 {
 	int i;
 	gsl_sf_result lnr;
@@ -94,7 +94,7 @@ void complex_cos_e(double *zr, double *zi, const int *len, double *val_lnr, doub
 	}
 }
 
-void complex_logsin_e(double *zr, double *zi, const int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
+void complex_logsin_e(double *zr, double *zi, int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
 {
 	int i;
 	gsl_sf_result lnr;
@@ -112,7 +112,7 @@ void complex_logsin_e(double *zr, double *zi, const int *len, double *val_lnr, d
 	}
 }
 
-void lnsinh_e(const double *x, const int *len, double *val, double *err, int *status)
+void lnsinh_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -125,7 +125,7 @@ void lnsinh_e(const double *x, const int *len, double *val, double *err, int *st
 	}
 } 
 
-void lncosh_e(const double *x, const int *len, double *val, double *err, int *status)
+void lncosh_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

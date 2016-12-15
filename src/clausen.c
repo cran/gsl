@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_dawson  goes to dawson. */
 
 
-void clausen_e(const double *x, const int *len, double *val, double *err, int *status)
+void clausen_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

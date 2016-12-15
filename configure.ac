@@ -18,12 +18,11 @@ if test "${GSL_CONFIG}" != ""; then
    # Use gsl-config for header and linker arguments
    GSL_CFLAGS=`${GSL_CONFIG} --cflags`
    GSL_LIBS=`${GSL_CONFIG} --libs`
-   CFLAGS="$CFLAGS $GSL_CFLAGS"  # kindly supplied by Ray Brownrigg
 else
    AC_MSG_ERROR([gsl-config not found, is GSL installed?])
 fi
 
-AC_MSG_CHECKING([if GSL version >= 2.1])
+AC_MSG_CHECKING([if GSL version >= 1.12])
 AC_RUN_IFELSE([AC_LANG_SOURCE([[
 #include <string.h>
 #include <gsl/gsl_version.h>
@@ -34,8 +33,7 @@ int main() {
    if ((sscanf(gslv, "%d.%d", &major, &minor)) != 2) {
      exit (1);
    }
-   exit (minor < 1);
-   exit (major < 2);
+   exit (major == 1 && minor < 12);
 #else
   exit(1);
 #endif
@@ -45,7 +43,7 @@ int main() {
 [gsl_version_ok=no],
 [gsl_version_ok=yes])
 if test "${gsl_version_ok}" = no; then
-  AC_MSG_ERROR([Need GSL version >= 2.1])
+  AC_MSG_ERROR([Need GSL version >= 1.12])
 else
   AC_MSG_RESULT([yes])
 fi

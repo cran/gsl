@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_dawson  goes to dawson. */
 
 
-void dawson(const double *x, const int *len, double *val, double *err, int *status)
+void dawson(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

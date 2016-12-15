@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_airy_Ai goes to airy_Ai. */
 
 
-void erf_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void erf_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void erf_e(const double *x, const int *len, int *mode, double *val, double *err,
 	}
 }  
 
-void erfc_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void erfc_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void erfc_e(const double *x, const int *len, int *mode, double *val, double *err
 	}
 }  
 
-void log_erfc_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void log_erfc_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void log_erfc_e(const double *x, const int *len, int *mode, double *val, double 
 	}
 }  
 
-void log_erf_Z_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void log_erf_Z_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -57,7 +57,7 @@ void log_erf_Z_e(const double *x, const int *len, int *mode, double *val, double
 	}
 }  
 
-void log_erf_Q_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void log_erf_Q_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -70,7 +70,7 @@ void log_erf_Q_e(const double *x, const int *len, int *mode, double *val, double
 	}
 }  
 
-void hazard_e(const double *x, const int *len, int *mode, double *val, double *err, int *status)
+void hazard_e(double *x, int *len, int *mode, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

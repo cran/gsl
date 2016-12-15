@@ -5,7 +5,7 @@
    of the name and the _e from the end.  Thus gsl_sf_laguerre_1_e goes
    to laguerre_1. */
 
-void laguerre_1(const double *a, const double *x, const int *len, double *val, double *err, int *status)
+void laguerre_1(double *a, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void laguerre_1(const double *a, const double *x, const int *len, double *val, d
 	}
 }  
 
-void laguerre_2(const double *a, const double *x, const int *len, double *val, double *err, int *status)
+void laguerre_2(double *a, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void laguerre_2(const double *a, const double *x, const int *len, double *val, d
 	}
 }  
 
-void laguerre_3(const double *a, const double *x, const int *len, double *val, double *err, int *status)
+void laguerre_3(double *a, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void laguerre_3(const double *a, const double *x, const int *len, double *val, d
 	}
 }  
 
-void laguerre_n(int *n, const double *a, const double *x, const int *len, double *val, double *err, int *status)
+void laguerre_n(int *n, double *a, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

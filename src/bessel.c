@@ -9,7 +9,7 @@ static int sf_mode[] = { GSL_PREC_DOUBLE, GSL_PREC_SINGLE, GSL_PREC_APPROX } ;
 
 /* J series begins*/
 
-void bessel_J0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_J0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -22,7 +22,7 @@ void bessel_J0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_J1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_J1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -35,7 +35,7 @@ void bessel_J1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_Jn_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Jn_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -48,7 +48,7 @@ void bessel_Jn_e(int *n, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_Jn_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_Jn_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -61,7 +61,7 @@ void bessel_Jn_array_e(const int *nmin, const int *nmax, const double *x, const 
 /* J series ends*/
 /* Y series begins*/
 
-void bessel_Y0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Y0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -74,7 +74,7 @@ void bessel_Y0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_Y1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Y1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -87,7 +87,7 @@ void bessel_Y1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_Yn_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Yn_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -100,7 +100,7 @@ void bessel_Yn_e(int *n, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_Yn_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_Yn_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -114,7 +114,7 @@ void bessel_Yn_array_e(const int *nmin, const int *nmax, const double *x, const 
 /* I series begins*/
 
 
-void bessel_I0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_I0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -127,7 +127,7 @@ void bessel_I0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_I1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_I1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -140,7 +140,7 @@ void bessel_I1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_In_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_In_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -153,7 +153,7 @@ void bessel_In_e(int *n, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_In_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_In_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -166,7 +166,7 @@ void bessel_In_array_e(const int *nmin, const int *nmax, const double *x, const 
 /*I series ends*/
 /* I_scaled series begins*/
 
-void bessel_I0_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_I0_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -182,7 +182,7 @@ void bessel_I0_scaled_e(const double *x, const int *len, double *val, double *er
 /* J series begins*/
 /* J series begins*/
 
-void bessel_I1_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_I1_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -195,7 +195,7 @@ void bessel_I1_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_In_scaled_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_In_scaled_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -208,7 +208,7 @@ void bessel_In_scaled_e(int *n, const double *x, const int *len, double *val, do
 	}
 }  
 
-void bessel_In_scaled_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_In_scaled_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -221,7 +221,7 @@ void bessel_In_scaled_array_e(const int *nmin, const int *nmax, const double *x,
 /* I_scaled series begins*/
 /* K series begins*/
 
-void bessel_K0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_K0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -234,7 +234,7 @@ void bessel_K0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_K1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_K1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -247,7 +247,7 @@ void bessel_K1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_Kn_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Kn_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -260,7 +260,7 @@ void bessel_Kn_e(int *n, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_Kn_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_Kn_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -273,7 +273,7 @@ void bessel_Kn_array_e(const int *nmin, const int *nmax, const double *x, const 
 /* K series ends*/
 /* K_scaled series begins*/
 
-void bessel_K0_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_K0_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -286,7 +286,7 @@ void bessel_K0_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_K1_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_K1_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -299,7 +299,7 @@ void bessel_K1_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_Kn_scaled_e(int *n, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Kn_scaled_e(int *n, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -312,7 +312,7 @@ void bessel_Kn_scaled_e(int *n, const double *x, const int *len, double *val, do
 	}
 }  
 
-void bessel_Kn_scaled_array_e(const int *nmin, const int *nmax, const double *x, const int *len, double *out, int* status)
+void bessel_Kn_scaled_array_e(int *nmin, int *nmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -325,7 +325,7 @@ void bessel_Kn_scaled_array_e(const int *nmin, const int *nmax, const double *x,
 /* K_scaled series ends */
 /* j0 series begins */
 
-void bessel_j0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_j0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -338,7 +338,7 @@ void bessel_j0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_j1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_j1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -351,7 +351,7 @@ void bessel_j1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_j2_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_j2_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -364,7 +364,7 @@ void bessel_j2_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_jl_e(int *l, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_jl_e(int *l, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -377,7 +377,7 @@ void bessel_jl_e(int *l, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_jl_array_e(int *lmax, const double *x, const int *len, double *out, int* status)
+void bessel_jl_array_e(int *lmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -387,7 +387,7 @@ void bessel_jl_array_e(int *lmax, const double *x, const int *len, double *out, 
 	}
 }
 
-void bessel_jl_steed_array_e(int *lmax, const double *x, const int *len, double *out, int* status)
+void bessel_jl_steed_array_e(int *lmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -397,7 +397,7 @@ void bessel_jl_steed_array_e(int *lmax, const double *x, const int *len, double 
 	}
 }
 
-void bessel_y0_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_y0_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -410,7 +410,7 @@ void bessel_y0_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_y1_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_y1_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -423,7 +423,7 @@ void bessel_y1_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_y2_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_y2_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -436,7 +436,7 @@ void bessel_y2_e(const double *x, const int *len, double *val, double *err, int 
 	}
 }  
 
-void bessel_yl_e(int *l, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_yl_e(int *l, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -449,7 +449,7 @@ void bessel_yl_e(int *l, const double *x, const int *len, double *val, double *e
 	}
 }  
 
-void bessel_yl_array_e(int *lmax, const double *x, const int *len, double *out, int* status)
+void bessel_yl_array_e(int *lmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -462,7 +462,7 @@ void bessel_yl_array_e(int *lmax, const double *x, const int *len, double *out, 
 /* yl series ends */
 /* i_scaled series starts */
 
-void bessel_i0_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_i0_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -475,7 +475,7 @@ void bessel_i0_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_i1_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_i1_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -488,7 +488,7 @@ void bessel_i1_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_i2_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_i2_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -501,7 +501,7 @@ void bessel_i2_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_il_scaled_e(int *l, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_il_scaled_e(int *l, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -514,7 +514,7 @@ void bessel_il_scaled_e(int *l, const double *x, const int *len, double *val, do
 	}
 }  
 
-void bessel_il_scaled_array_e(int *lmax, const double *x, const int *len, double *out, int* status)
+void bessel_il_scaled_array_e(int *lmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -527,7 +527,7 @@ void bessel_il_scaled_array_e(int *lmax, const double *x, const int *len, double
 /* i_scaled series ends */
 /* k_scaled series starts */
 
-void bessel_k0_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_k0_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -540,7 +540,7 @@ void bessel_k0_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_k1_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_k1_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -553,7 +553,7 @@ void bessel_k1_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_k2_scaled_e(const double *x, const int *len, double *val, double *err, int *status)
+void bessel_k2_scaled_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -566,7 +566,7 @@ void bessel_k2_scaled_e(const double *x, const int *len, double *val, double *er
 	}
 }  
 
-void bessel_kl_scaled_e(int *l, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_kl_scaled_e(int *l, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -579,7 +579,7 @@ void bessel_kl_scaled_e(int *l, const double *x, const int *len, double *val, do
 	}
 }  
 
-void bessel_kl_scaled_array_e(int *lmax, const double *x, const int *len, double *out, int* status)
+void bessel_kl_scaled_array_e(int *lmax, double *x, int *len, double *out, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -592,7 +592,7 @@ void bessel_kl_scaled_array_e(int *lmax, const double *x, const int *len, double
 /*k_scaled series ends */
 /*Jnu series starts */
 
-void bessel_Jnu_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Jnu_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -611,7 +611,7 @@ void bessel_sequence_Jnu_e(double *nu, double *v, int *nv, int *mode, int *statu
 	*status=gsl_sf_bessel_sequence_Jnu_e(*nu, sf_mode[*mode], (size_t) *nv, v);
 }  
 
-void bessel_Ynu_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Ynu_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -624,7 +624,7 @@ void bessel_Ynu_e(double *nu, const double *x, const int *len, double *val, doub
 	}
 }  
 
-void bessel_Inu_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Inu_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -637,7 +637,7 @@ void bessel_Inu_e(double *nu, const double *x, const int *len, double *val, doub
 	}
 }  
 
-void bessel_Inu_scaled_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Inu_scaled_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -650,7 +650,7 @@ void bessel_Inu_scaled_e(double *nu, const double *x, const int *len, double *va
 	}
 }  
 
-void bessel_Knu_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Knu_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -663,7 +663,7 @@ void bessel_Knu_e(double *nu, const double *x, const int *len, double *val, doub
 	}
 }  
 
-void bessel_lnKnu_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_lnKnu_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -676,7 +676,7 @@ void bessel_lnKnu_e(double *nu, const double *x, const int *len, double *val, do
 	}
 }  
 
-void bessel_Knu_scaled_e(double *nu, const double *x, const int *len, double *val, double *err, int *status)
+void bessel_Knu_scaled_e(double *nu, double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -689,7 +689,7 @@ void bessel_Knu_scaled_e(double *nu, const double *x, const int *len, double *va
 	}
 }  
 
-void bessel_zero_J0_e(unsigned int *s, const int *len, double *val, double *err, int *status)
+void bessel_zero_J0_e(unsigned int *s, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -700,7 +700,7 @@ void bessel_zero_J0_e(unsigned int *s, const int *len, double *val, double *err,
 	}
 }
 
-void bessel_zero_J1_e(unsigned int *s, const int *len, double *val, double *err, int *status)
+void bessel_zero_J1_e(unsigned int *s, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -711,7 +711,7 @@ void bessel_zero_J1_e(unsigned int *s, const int *len, double *val, double *err,
 	}
 }
 
-void bessel_zero_Jnu_e(double *nu, unsigned int *s, const int *len, double *val, double *err, int *status)
+void bessel_zero_Jnu_e(double *nu, unsigned int *s, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

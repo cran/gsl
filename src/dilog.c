@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_dilog_e goes to dilog_e. */
 
 
-void dilog_e(const double *x, const int *len, double *val, double *err, int *status)
+void dilog_e(double *x, int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void dilog_e(const double *x, const int *len, double *val, double *err, int *sta
 	}
 }  
 
-void complex_dilog_e(const double *r, const double *theta, const int *len, double *val_re, double *val_im, double *err_re, double *err_im, int *status)
+void complex_dilog_e(double *r, double *theta, int *len, double *val_re, double *val_im, double *err_re, double *err_im, int *status)
 {
 	int i;
 	gsl_sf_result re;
