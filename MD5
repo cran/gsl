@@ -1,4 +1,4 @@
-e36ce2c14594bb81cdaa852dc524d35a *DESCRIPTION
+b6b5ebb7bc914901ca77bbfa87504069 *DESCRIPTION
 43cfffb315b399d106c9e7954f22d91a *INSTALL
 31483d04500c9ce2a7050ab516eec317 *NAMESPACE
 49451ef3da39ad3348db4efb9897229d *R/aaa.R
@@ -33,7 +33,7 @@ f2606a5708629a1b4ebc401b857ba00d *R/psi.R
 699c11587bc6e03c24f909f22cf36a83 *R/trig.R
 81e928a7d5059c7af5ac33ffb1a15184 *R/zeta.R
 db9a953c82fb5bcad9aee1bc7c6c053a *R/zzz.R
-8e6b7605d948e5a489e0d9dd981537ef *build/vignette.rds
+fa13549f84c90eecbc081c4af8e1fa88 *build/vignette.rds
 67c9db5dc1a8e12ccf5880ffe206ce56 *cleanup
 9a9891f695e4676eb2f69fb50f393f57 *configure
 b0a09ce66804c989dc28f289db46011c *configure.ac
