@@ -6,7 +6,7 @@
    psi_1. */
 
 
-void psi_int(int *n, int *len, double *val, double *err, int *status)
+void psi_int(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -19,7 +19,7 @@ void psi_int(int *n, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void psi(double *x, int *len, double *val, double *err, int *status)
+void psi(double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -32,7 +32,7 @@ void psi(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void psi_1piy(double *y, int *len, double *val, double *err, int *status)
+void psi_1piy(double *y, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -48,7 +48,7 @@ void psi_1piy(double *y, int *len, double *val, double *err, int *status)
 
 
 
-void psi_1_int(int *n, int *len, double *val, double *err, int *status)
+void psi_1_int(const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -61,7 +61,7 @@ void psi_1_int(int *n, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void psi_1(double *x, int *len, double *val, double *err, int *status)
+void psi_1(double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -74,7 +74,7 @@ void psi_1(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void psi_n(int *m, double *x, int *len, double *val, double *err, int *status)
+void psi_n(int *m, double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

@@ -6,7 +6,7 @@
    gsl_sf_complex_log_e goes to complex_log_e. */
 
 
-void log_e(double *x, int *len, double *val, double *err, int *status)
+void log_e(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -19,7 +19,7 @@ void log_e(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void log_abs_e(double *x, int *len, double *val, double *err, int *status)
+void log_abs_e(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -32,7 +32,7 @@ void log_abs_e(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void complex_log_e(double *zr, double *zi, int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
+void complex_log_e(const double *zr, const double *zi, const int *len, double *val_lnr, double *val_arg, double *err_lnr, double *err_arg, int *status)
 {
 	int i;
 	gsl_sf_result lnr;
@@ -50,7 +50,7 @@ void complex_log_e(double *zr, double *zi, int *len, double *val_lnr, double *va
 	}
 }
 
-void log_1plusx_e(double *x, int *len, double *val, double *err, int *status)
+void log_1plusx_e(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -63,7 +63,7 @@ void log_1plusx_e(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void log_1plusx_mx_e(double *x, int *len, double *val, double *err, int *status)
+void log_1plusx_mx_e(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

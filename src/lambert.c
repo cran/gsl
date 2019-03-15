@@ -5,7 +5,7 @@
    of the name and the _e from the end.  Thus gsl_sf_lambert_W0 goes
    to lambert_W0. */
 
-void lambert_W0(double *x, int *len, double *val, double *err, int *status)
+void lambert_W0(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void lambert_W0(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void lambert_Wm1(double *x, int *len, double *val, double *err, int *status)
+void lambert_Wm1(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

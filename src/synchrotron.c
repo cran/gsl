@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_synchrotron  goes to synchrotron. */
 
 
-void synchrotron_1(double *x, int *len, double *val, double *err, int *status)
+void synchrotron_1(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void synchrotron_1(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void synchrotron_2(double *x, int *len, double *val, double *err, int *status)
+void synchrotron_2(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

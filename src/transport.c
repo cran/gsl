@@ -5,7 +5,7 @@
    of the name.  Thus gsl_sf_transport  goes to transport. */
 
 
-void transport_2(double *x, int *len, double *val, double *err, int *status)
+void transport_2(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void transport_2(double *x, int *len, double *val, double *err, int *status)
 	}
 } 
  
-void transport_3(double *x, int *len, double *val, double *err, int *status)
+void transport_3(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,7 +31,7 @@ void transport_3(double *x, int *len, double *val, double *err, int *status)
 	}
 } 
  
-void transport_4(double *x, int *len, double *val, double *err, int *status)
+void transport_4(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -44,7 +44,7 @@ void transport_4(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void transport_5(double *x, int *len, double *val, double *err, int *status)
+void transport_5(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

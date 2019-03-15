@@ -6,7 +6,7 @@
    debye_1. */
 
 
-void debye_1(double *x, int *len, double *val, double *err, int *status)
+void debye_1(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -19,7 +19,7 @@ void debye_1(double *x, int *len, double *val, double *err, int *status)
 	}
 }  
 
-void debye_2(double *x, int *len, double *val, double *err, int *status)
+void debye_2(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -32,7 +32,7 @@ void debye_2(double *x, int *len, double *val, double *err, int *status)
 	}
 } 
  
-void debye_3(double *x, int *len, double *val, double *err, int *status)
+void debye_3(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -45,7 +45,7 @@ void debye_3(double *x, int *len, double *val, double *err, int *status)
 	}
 }
   
-void debye_4(double *x, int *len, double *val, double *err, int *status)
+void debye_4(const double *x, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

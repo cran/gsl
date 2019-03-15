@@ -5,7 +5,7 @@
    of the name and _e from the end. */
 
 
-void hydrogenicR_1(double *Z, double *r, int *len, double *val, double *err, int *status)
+void hydrogenicR_1(const double *Z, const double *r, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -18,7 +18,7 @@ void hydrogenicR_1(double *Z, double *r, int *len, double *val, double *err, int
 	}
 }  
 
-void hydrogenicR(int *n, int *l, double *Z, double *r, int *len, double *val, double *err, int *status)
+void hydrogenicR(const int *n, const int *l, const double *Z, const double *r, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -31,12 +31,12 @@ void hydrogenicR(int *n, int *l, double *Z, double *r, int *len, double *val, do
 	}
 }  
 
-void coulomb_wave_FG(double *eta, double *x, double *L_F, int *k, int *len,
-		     double *val_F   , double *err_F  ,
-		     double *val_Fp  , double *err_Fp ,
-		     double *val_G   , double *err_G  , 
-		     double *val_Gp  , double *err_Gp ,
-		     double *exp_F   , double *exp_G  , 
+void coulomb_wave_FG(const double *eta, const double *x, const double *L_F, const int *k, const int *len,
+		      double *val_F   ,  double *err_F  ,
+		      double *val_Fp  ,  double *err_Fp ,
+		      double *val_G   ,  double *err_G  , 
+		      double *val_Gp  ,  double *err_Gp ,
+		      double *exp_F   ,  double *exp_G  , 
 		     int *status)
 {
 	int i;
@@ -59,7 +59,7 @@ void coulomb_wave_FG(double *eta, double *x, double *L_F, int *k, int *len,
 	}
 }  
 
-void coulomb_wave_F_array(double *L_min, int *kmax, double *eta, double *x, int *len, double *fc_array, double *F_exponent, int* status)
+void coulomb_wave_F_array(const double *L_min, const int *kmax, const double *eta, double *x, const int *len, double *fc_array, double *F_exponent, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -69,7 +69,7 @@ void coulomb_wave_F_array(double *L_min, int *kmax, double *eta, double *x, int 
 	}
 }
 
-void coulomb_wave_FG_array(double *L_min, int *kmax, double *eta, double *x, int *len, double *fc_array, double *gc_array, double *F_exponent, double *G_exponent, int* status)
+void coulomb_wave_FG_array(const double *L_min, const int *kmax, const double *eta, double *x, const int *len, double *fc_array, double *gc_array, double *F_exponent, double *G_exponent, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -80,7 +80,7 @@ void coulomb_wave_FG_array(double *L_min, int *kmax, double *eta, double *x, int
 }
 
 
-void coulomb_wave_FGp_array(double *L_min, int *kmax, double *eta, double *x, int *len, double *fc_array, double *fcp_array, double *gc_array, double *gcp_array, double *F_exponent, double *G_exponent, int* status)
+void coulomb_wave_FGp_array(const double *L_min, const int *kmax, const double *eta, const double *x, const int *len, double *fc_array, double *fcp_array, double *gc_array, double *gcp_array, double *F_exponent, double *G_exponent, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -90,7 +90,7 @@ void coulomb_wave_FGp_array(double *L_min, int *kmax, double *eta, double *x, in
 	}
 }
 
-void coulomb_wave_sphF_array(double *L_min, int *kmax, double *eta, double *x, int *len, double *fc_array, double *F_exponent, int* status)
+void coulomb_wave_sphF_array(const double *L_min, const int *kmax, const double *eta, double *x, const int *len, double *fc_array, double *F_exponent, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();
@@ -101,7 +101,7 @@ void coulomb_wave_sphF_array(double *L_min, int *kmax, double *eta, double *x, i
 }
 
 
-void coulomb_CL(double *L, double *eta, int *len, double *val, double *err, int *status)
+void coulomb_CL(const double *L, const double *eta, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;
@@ -115,7 +115,7 @@ void coulomb_CL(double *L, double *eta, int *len, double *val, double *err, int 
 }  
 
 
-void coulomb_CL_array(double *L_min, int *kmax, double *eta,  int *len, double *cl, int* status)
+void coulomb_CL_array(const double *L_min, const int *kmax, const double *eta,  const int *len, double *cl, int* status)
 {
 	int i;
 	gsl_set_error_handler_off();

@@ -172,19 +172,17 @@
   }
 }
 
-"ellint_D" <- function(phi, k, n, mode=0, give=FALSE, strict=TRUE){
+"ellint_D" <- function(phi, k, mode=0, give=FALSE, strict=TRUE){
   if(length(mode)>1){stop("length of mode must be 1")}
 
-  jj <- process.args(phi,k,n)
+  jj <- process.args(phi,k)
   phi.vec <- jj$arg1
   k.vec <- jj$arg2
-  n.vec <- jj$arg3
   attr <- jj$attr
   
   jj <- .C("ellint_D_e",
            as.double(phi.vec),
            as.double(k.vec),
-           as.double(n.vec),
            as.integer(length(k.vec)),
            as.integer(mode),
            val=as.double(k.vec),

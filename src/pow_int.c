@@ -5,7 +5,7 @@
    of the name, and stripping the _e.  Thus gsl_sf_laguerre_1_e goes
    to laguerre_1. */
 
-void pow_int(double *x, int *n, int *len, double *val, double *err, int *status)
+void pow_int(const double *x, const int *n, const int *len, double *val, double *err, int *status)
 {
 	int i;
 	gsl_sf_result result;

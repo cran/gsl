@@ -41,7 +41,7 @@
   
   jj <- .C("complex_dilog_e",
            as.double(r.vec),
-           as.double(theta),
+           as.double(theta.vec), # sharp-eyed bug report from Glenn Davis
            as.integer(length(r)),
            val_re=as.double(r.vec),
            val_im=as.double(r.vec),
