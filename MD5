@@ -1,6 +1,6 @@
-06902c1176cde969da8398e8b0c0ef46 *DESCRIPTION
+649abe7d65384b5cc354f90c7570570b *DESCRIPTION
 9bbbfd7e24e23face00d261cf4d4ab25 *INSTALL
-31483d04500c9ce2a7050ab516eec317 *NAMESPACE
+ec67552702abab9a4659ee613d367980 *NAMESPACE
 49451ef3da39ad3348db4efb9897229d *R/aaa.R
 03ae4d3fba892312f51e5a3ffc7c0fb8 *R/airy.R
 fe8b740941ba5d4db46c06d91d2ea184 *R/bessel.R
@@ -12,7 +12,7 @@ efda650f9c08a18868753656bbbc5f0b *R/coupling.R
 86c73ed966d517db954648f3af722988 *R/dilog.R
 475580f14fd9545f05d696c380ae9c12 *R/ellint.R
 cc8b5050e1462ac3110d9f2d0a77b8a7 *R/elljac.R
-63e89748e7421f9d36beced3c5aa41b2 *R/error.R
+e387ea917edc9ce5dbf7fcd3d59fc3ee *R/error.R
 90d4e6fe350e81ea1cbe11d34ad9325f *R/expint.R
 52a98ad52b5f6afa08b023eb5d31af23 *R/fermi_dirac.R
 92b6a84fdd23cbbe7635f6a323671109 *R/gamma.R
@@ -22,7 +22,7 @@ f4d90b1eaed0d5431fb72f7cd017ccbb *R/hyperg.R
 91b6b722747196034cbd2a190c1a6282 *R/lambert.R
 41075a8683d6bc3ed1ac78aef384bd70 *R/legendre.R
 7ab481dd8fe0647da9d8094073e20203 *R/log.R
-ef7637862f4f2091b0c7926fe34b3d33 *R/multimin.R
+7366f85a711ffe092742b3afce23dd42 *R/multimin.R
 e173f4cb4f3c07696d5249c5f9727906 *R/poly.R
 af87996572694b59ae73f4481c37ced6 *R/pow_int.R
 f2606a5708629a1b4ebc401b857ba00d *R/psi.R
@@ -33,7 +33,7 @@ f2606a5708629a1b4ebc401b857ba00d *R/psi.R
 699c11587bc6e03c24f909f22cf36a83 *R/trig.R
 81e928a7d5059c7af5ac33ffb1a15184 *R/zeta.R
 db9a953c82fb5bcad9aee1bc7c6c053a *R/zzz.R
-31da088259275f2e90018f592bbbf99b *build/partial.rdb
+9db71a91fff4480714d0e18bb466bbcb *build/partial.rdb
 8b5202138a1af0cd2b8472a757fe033b *build/vignette.rds
 67c9db5dc1a8e12ccf5880ffe206ce56 *cleanup
 81285ddfdda408289378d4cef056af0f *configure
@@ -41,7 +41,7 @@ b9367294f0df9c1dc99d297fed74a8a2 *configure.ac
 9b41e88ea44e84f9978a41ff0dc98b8f *inst/CITATION
 e2b59fe3fff2bcb30599893a7e590f33 *inst/doc/gslpaper.R
 3301d42c84eae58199688edf0b89e67b *inst/doc/gslpaper.Rnw
-123997761f40cc0780d963caf7248bb1 *inst/doc/gslpaper.pdf
+7e49c289dcb15e4e6da7fffdf6a099d8 *inst/doc/gslpaper.pdf
 51d22603a282e6d49b45ba6f45fefddf *man/Airy.Rd
 6c1c6ddc0dfcd8b73ef6ffed42e65ba0 *man/Bessel.Rd
 7d06ff3c77d8b2a663b248a738856421 *man/Clausen.Rd
@@ -52,7 +52,7 @@ f63c29f8bd18f8b2d04050ae787ab721 *man/Debye.Rd
 116a4e433bb40c8969cc69478c780a8b *man/Dilog.Rd
 123c16167012bd4af56e16b0541b9b0c *man/Ellint.Rd
 bf62c520b78449c16488f54426154a0f *man/Elljac.Rd
-a718e4a398ac7a2b64d65f1dfb320432 *man/Error.Rd
+a707476dd10acc585e182fdc9e742cef *man/Error.Rd
 a68fc01c74086fbe4215a040835cb356 *man/Expint.Rd
 21fc303dd51814ac56b8f9945462810c *man/Fermi-Dirac.Rd
 91fdccdf6653b108c8f0b77f547b5d10 *man/Gamma.Rd
@@ -87,12 +87,13 @@ a0f8436540668edc1eebf7d90ac561fb *src/coupling.c
 c8b861498b3837da259d8ddd1ab782a0 *src/dilog.c
 fe09d8852d449ab25a03e57b93d3a766 *src/ellint.c
 9eacff2997558f2810c2d7711b0ecade *src/elljac.c
-e02103aaa88ca93b85524199596743bc *src/error.c
+954a9f1a7f5bb332f97a1ed9eed53e68 *src/error.c
 73afce7b8dd97edc8a9816613c55688f *src/expint.c
 ec31473b1e14580d10a190b0f58b491a *src/fermi_dirac.c
 6726e36122403c2317b79f2f0b081aca *src/gamma.c
 f2fb1a5af376fe1cd75078eadbc02d15 *src/gegenbauer.c
 2152f80c0bbd879134c8fd56f9ae50fa *src/hyperg.c
+e024911ad413adf68e6b441588b03c7d *src/init.c
 892000e15e29220ee82b7d9075500c4e *src/laguerre.c
 cc1b1448fd81ea0a5e1be7d6993ab630 *src/lambert.c
 0c17ca1e2f0056dc8a46caf73aaf2979 *src/legendre.c
@@ -100,8 +101,8 @@ b02fed23a674a60be08a6e2036580ddd *src/log.c
 5a89fb1b136c3dcbef79e74677081cc8 *src/poly.c
 58d4765885884c1c4df37ed9c2171037 *src/pow_int.c
 709817127e20690a234e5cca6337a3ae *src/psi.c
-67b89a4fa617eae660b32fd5cfa0ec9e *src/qrng.c
-55b3586e6d7df417b6e3f06404061837 *src/rng.c
+4c2209f42efd0a798b06e63db7080f1a *src/qrng.c
+196d138d9b36df09956f2155533bf592 *src/rng.c
 e5bff4e4f34b161c5614cfcd0f80d705 *src/synchrotron.c
 3d930d3d06dc965f4a07c64195ad9b0a *src/transport.c
 eaa60b954d9f69a70e558f17c0d9d86e *src/trig.c
