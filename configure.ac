@@ -1,5 +1,6 @@
 
-AC_INIT([src/airy.c])
+AC_INIT
+AC_CONFIG_SRCDIR([src/airy.c])
 
 #AC_CHECK_LIB(gsl, gsl_sf_airy_Ai_e,
 #             [LIBS="${LIBS} -lgsl -lgslcblas"], 
@@ -55,5 +56,6 @@ fi
 # Now substitute these variables in src/Makevars.in to create src/Makevars
 AC_SUBST(GSL_CFLAGS) 
 AC_SUBST(GSL_LIBS)
-AC_OUTPUT(src/Makevars)
+AC_CONFIG_FILES([src/Makevars])
+AC_OUTPUT
 

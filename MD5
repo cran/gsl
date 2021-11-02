@@ -1,4 +1,4 @@
-01ed103159e7a65e0be99dd4ff2d4fdf *DESCRIPTION
+8a56a0ecd3cdd0e71c23184ed32d7b1e *DESCRIPTION
 9bbbfd7e24e23face00d261cf4d4ab25 *INSTALL
 ec67552702abab9a4659ee613d367980 *NAMESPACE
 49451ef3da39ad3348db4efb9897229d *R/aaa.R
@@ -34,15 +34,15 @@ f2606a5708629a1b4ebc401b857ba00d *R/psi.R
 81e928a7d5059c7af5ac33ffb1a15184 *R/zeta.R
 db9a953c82fb5bcad9aee1bc7c6c053a *R/zzz.R
 7382ab40f14658be1a81f768c5e9b1ca *README.md
-3d6c5bf330130ad4a53570d2de1bc87d *build/partial.rdb
-dd3e2b2c6448c2bf317a7ca3e613612e *build/vignette.rds
+e888ee2a1df2368eadd0b450f9437b20 *build/partial.rdb
+3352c4eae0d79ea25b2eee9080991be4 *build/vignette.rds
 67c9db5dc1a8e12ccf5880ffe206ce56 *cleanup
-c1d586935faf878eea326fac290fd079 *configure
-c82feacac881ea4f5976a402b13875e0 *configure.ac
+3a8d3af005af5ce4609ece9aa6e22d93 *configure
+cf4575bdc3ae06c3d0491ecaa2a28ecd *configure.ac
 9b41e88ea44e84f9978a41ff0dc98b8f *inst/CITATION
 dafe9d5fe598b9d5073a32b2a7ceaf4c *inst/doc/gslpaper.R
 1ed95f1a6312f7c89ad972528100c68c *inst/doc/gslpaper.Rnw
-6914291bac5d882191d4ebbc01508abe *inst/doc/gslpaper.pdf
+c71493a566d9b9b0767b71733d8e7156 *inst/doc/gslpaper.pdf
 00f1038b3bfc5117565913fce1d70941 *inst/gsl_stickermaker.R
 183649ed6684b79e5cdfaf65c8d02030 *man/Airy.Rd
 26236ecc930d700f58b5ead19a73da06 *man/Bessel.Rd
