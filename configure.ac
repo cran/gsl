@@ -1,6 +1,17 @@
 
 AC_INIT
+
+# Ensure C++ is set up as R expects
+: ${R_HOME=`R RHOME`}
+if test -z "${R_HOME}"; then
+    AC_MSG_ERROR([Could not determine R_HOME.])
+fi
+CC=`"${R_HOME}/bin/R" CMD config CC`
+CFLAGS=`"${R_HOME}/bin/R" CMD config CFLAGS`
+AC_PROG_CC
+
 AC_CONFIG_SRCDIR([src/airy.c])
+
 
 #AC_CHECK_LIB(gsl, gsl_sf_airy_Ai_e,
 #             [LIBS="${LIBS} -lgsl -lgslcblas"], 
@@ -24,7 +35,7 @@ else
    AC_MSG_ERROR([gsl-config not found, is GSL installed?])
 fi
 
-AC_MSG_CHECKING([if GSL version >= 2.1])
+AC_MSG_CHECKING([if GSL version >= 2.5])
 AC_RUN_IFELSE([AC_LANG_SOURCE([[
 #include <string.h>
 #include <gsl/gsl_version.h>
@@ -48,7 +59,7 @@ int main() {
 [gsl_version_ok=no],
 [gsl_version_ok=yes])
 if test "${gsl_version_ok}" = no; then
-  AC_MSG_ERROR([Need GSL version >= 1.16])
+  AC_MSG_ERROR([Need GSL version >= 2.5])
 else
   AC_MSG_RESULT([yes])
 fi

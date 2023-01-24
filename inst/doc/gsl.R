@@ -1,25 +1,25 @@
-### R code from vignette source 'gslpaper.Rnw'
+### R code from vignette source 'gsl.Rnw'
 
 ###################################################
-### code chunk number 1: gslpaper.Rnw:121-121
+### code chunk number 1: gsl.Rnw:118-118
 ###################################################
 
 
 
 ###################################################
-### code chunk number 2: gslpaper.Rnw:122-123
+### code chunk number 2: gsl.Rnw:119-120
 ###################################################
 library(gsl)
 
 
 ###################################################
-### code chunk number 3: gslpaper.Rnw:128-129
+### code chunk number 3: gsl.Rnw:125-126
 ###################################################
 airy_Ai(1:3)
 
 
 ###################################################
-### code chunk number 4: gslpaper.Rnw:142-156
+### code chunk number 4: gsl.Rnw:139-153
 ###################################################
 x <- seq(from=0,to=10,len=100)
 plot(c(0,11),c(-1,1),type="n",main="Fig 10.6, p446",xlab="",ylab="",yaxt="n",xaxt="n",frame=FALSE)
@@ -38,7 +38,7 @@ text(11,-0.1,"x")
 
 
 ###################################################
-### code chunk number 5: gslpaper.Rnw:167-181
+### code chunk number 5: gsl.Rnw:164-178
 ###################################################
 x <- seq(from=0,to=10,len=100)
 plot(c(0,10),c(-1,2.2),type="n",main="Fig 10.7, p446",xlab="",ylab="",yaxt="n",xaxt="n",frame=FALSE)
@@ -57,7 +57,7 @@ text(10,-0.1,"x")
 
 
 ###################################################
-### code chunk number 6: gslpaper.Rnw:279-292
+### code chunk number 6: gsl.Rnw:276-289
 ###################################################
 f <- function(r,n){ 
 -airy_Ai(r+airy_zero_Ai(n+1))/airy_zero_Ai_deriv(n+1)}
